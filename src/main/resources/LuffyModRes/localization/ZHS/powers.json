@@ -1,0 +1,14 @@
+{
+  "LuffyMod:GumGumFruitPower": {
+    "NAME": "橡胶果实能力",
+    "DESCRIPTIONS": [
+      "当你成功 #y格挡 伤害时，获得 消耗格挡点数 #y弹力 。"
+    ]
+  },
+  "LuffyMod:ElasticPower": {
+    "NAME": "弹力",
+    "DESCRIPTIONS": [
+      "利用 #y弹力 可以强化橡胶人的各项能力。"," NL 每回合结束清空。"
+    ]
+  }
+}

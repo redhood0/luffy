@@ -2,6 +2,29 @@
   "LuffyMod:Strike": {
     "NAME": "打击",
     "DESCRIPTION": "造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "LuffyMod:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": " 获得 !B! 点格挡。"
+  },
+  "LuffyMod:GumGumFruit": {
+    "NAME": "奇怪花纹的果实",
+    "DESCRIPTION": "吞下奇怪花纹的果实。 NL 使用后永久移除 。 ",
+    "UPGRADE_DESCRIPTION": "吞下奇怪花纹的果实。 NL 使用后永久移除 。"
+  },
+  "LuffyMod:PistolLv1": {
+    "NAME": "橡胶手枪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 弹力 增加 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 弹力 增加 !M! 点伤害。"
+  },
+  "LuffyMod:GatlingLv1": {
+    "NAME": "橡胶机关枪",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
+    "EXTENDED_DESCRIPTION": [" NL 失去"," 弹力 增加 ","次攻击。"]
   }
+
+
 }

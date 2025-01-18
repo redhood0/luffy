@@ -1,0 +1,16 @@
+{
+  "LuffyMod:MyRelic": {
+    "NAME": "草帽",
+    "FLAVOR": "这是我最重要的帽子，好好守护喔，将来你一定要还给我，当你成为出色的海贼时。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，抽 #b1 张牌。"
+    ]
+  },
+  "LuffyMod:GumGumFruitRelic": {
+    "NAME": "橡胶果实？",
+    "FLAVOR": "超人系果实，食用者会变成橡胶人。",
+    "DESCRIPTIONS": [
+      "每场战斗开始时，获得橡胶果实能力。"
+    ]
+  }
+}

@@ -3,6 +3,7 @@ package com.onepiece.characters;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
+import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -18,8 +19,11 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.Vajra;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.onepiece.cards.Strike;
+import com.onepiece.cards.basic.Defend;
+import com.onepiece.cards.basic.GumGumFruit;
+import com.onepiece.cards.basic.Strike;
 import com.onepiece.modcore.LuffyMod;
+import com.onepiece.relic.MyRelic;
 
 import java.util.ArrayList;
 
@@ -88,8 +92,10 @@ public class LuffyChar extends CustomPlayer {
         for(int x = 0; x<5; x++) {
             retVal.add(Strike.ID);
         }
-        retVal.add("LuffyMod:Strike");
-
+        for(int x = 0; x<4; x++) {
+            retVal.add(Defend.ID);
+        }
+        retVal.add(GumGumFruit.ID);
 
 
         return retVal;
@@ -98,7 +104,7 @@ public class LuffyChar extends CustomPlayer {
     // 初始遗物的ID，可以先写个原版遗物凑数
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
-        retVal.add(Vajra.ID);
+        retVal.add(MyRelic.ID);
         return retVal;
     }
 
@@ -157,6 +163,7 @@ public class LuffyChar extends CustomPlayer {
     // 人物选择界面点击你的人物按钮时触发的方法，这里为屏幕轻微震动
     @Override
     public void doCharSelectScreenSelectEffect() {
+        CardCrawlGame.sound.playA("ATTACK_HEAVY", MathUtils.random(-0.2F, 0.2F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
 
