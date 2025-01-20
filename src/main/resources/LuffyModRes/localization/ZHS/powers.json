@@ -8,7 +8,25 @@
   "LuffyMod:ElasticPower": {
     "NAME": "弹力",
     "DESCRIPTIONS": [
-      "利用 #y弹力 可以强化橡胶人的各项能力。"," NL 每回合结束清空。"
+      "利用 #y弹力 可以强化橡胶人的各项能力。"," NL 你的回合结束清空。"
+    ]
+  },
+  "LuffyMod:RubberDrivePower": {
+    "NAME": "橡胶动力",
+    "DESCRIPTIONS": [
+      "每次消耗弹力大于5点，抽1张卡。"
+    ]
+  },
+  "LuffyMod:GearTwoPower": {
+    "NAME": "二档",
+    "DESCRIPTIONS": [
+      " #y[橡胶] 攻击牌会额外造成 #y1 次伤害 ,回合结束时 #y失去 " , "点生命。"
+    ]
+  },
+  "LuffyMod:BloodboilingPower": {
+    "NAME": "热血沸腾",
+    "DESCRIPTIONS": [
+      "每当你从一张牌中失去生命时, 获得" , "点 #y力量 和 #y弹力 。"
     ]
   }
 }

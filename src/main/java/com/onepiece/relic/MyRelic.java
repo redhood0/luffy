@@ -33,9 +33,6 @@ public class MyRelic extends CustomRelic {
         return new MyRelic();
     }
 
-//    @Override
-//    public void atBattleStart() {
-//        super.atBattleStart();
-//        this.addToBot(new DrawCardAction(1));
-//    }
+
+
 }

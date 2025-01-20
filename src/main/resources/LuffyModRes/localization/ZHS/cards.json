@@ -1,8 +1,13 @@
 {
   "LuffyMod:Strike": {
     "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害。",
+    "DESCRIPTION": "造成 !D! 点伤害。 ",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "LuffyMod:GumStrike": {
+    "NAME": "橡胶打击",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 !M! 点伤害。"
   },
   "LuffyMod:Defend": {
     "NAME": "防御",
@@ -16,15 +21,77 @@
   },
   "LuffyMod:PistolLv1": {
     "NAME": "橡胶手枪",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 弹力 增加 !M! 点伤害。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 弹力 增加 !M! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 !M! 点伤害。"
   },
   "LuffyMod:GatlingLv1": {
     "NAME": "橡胶机关枪",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
+    "DESCRIPTION": " 消耗 。造成 !D! 点伤害 !M! 次。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
-    "EXTENDED_DESCRIPTION": [" NL 失去"," 弹力 增加 ","次攻击。"]
+    "EXTENDED_DESCRIPTION": [
+      " NL 失去",
+      " 点 弹力 增加 ",
+      "次攻击。"
+    ]
+  },
+  "LuffyMod:FusenLv1": {
+    "NAME": "橡胶气球",
+    "DESCRIPTION": " 消耗 。 将你的 弹力 转化为相同的点数的 格挡 。",
+    "UPGRADE_DESCRIPTION": "消耗 。 将你的 弹力 转化为1.5倍点数的 格挡 。"
+  },
+  "LuffyMod:Recharge": {
+    "NAME": "橡胶蓄力",
+    "DESCRIPTION": " 保留 。 获得 !M! 点 弹力 。",
+    "UPGRADE_DESCRIPTION": " 保留 。 固有 。 NL 获得 !M! 点 弹力 。"
+  },
+  "LuffyMod:RifleLv1": {
+    "NAME": "橡胶螺旋弹",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 抽 1张牌。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 抽 2张牌。"
+  },
+  "LuffyMod:RubberDrive": {
+    "NAME": "橡胶动力",
+    "DESCRIPTION": "每当 !M! 点及更多弹力被 使用 NL ,抽1张牌。",
+    "UPGRADE_DESCRIPTION": "每当 !M! 点及更多弹力被 使用 NL ,抽1张牌。"
+  },
+  "LuffyMod:BazookaLv1": {
+    "NAME": "橡胶火箭炮",
+    "DESCRIPTION": "造成 !D! 点伤害 。 NL 失去 10 弹力 给予 1层 易伤。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 。 NL 失去 10 弹力 给予 1层 易伤。"
+  },
+  "LuffyMod:GearTwo": {
+    "NAME": "二档",
+    "DESCRIPTION": " [橡胶] 攻击牌会 NL 额外造成1次伤害。 NL 回合结束时失去 !M! 点生命。",
+    "UPGRADE_DESCRIPTION": " [橡胶]攻击牌 NL 会额外造成1次伤害。 NL 回合结束时失去 !M! 点生命。"
+  },
+  "LuffyMod:PistolLv2": {
+    "NAME": "橡胶JET手枪",
+    "DESCRIPTION": " 造成 !D! 点伤害。 NL 失去 2 点生命，获得 !M! 点 弹力 。",
+    "UPGRADE_DESCRIPTION": " 造成 !D! 点伤害。 NL 失去 2 点生命，获得 !M! 点 弹力 。"
+  },
+  "LuffyMod:GatlingLv2": {
+    "NAME": "橡胶JET机关枪",
+    "DESCRIPTION": " 随机对敌人造成 !D! 点伤害5次。 NL 失去 5 点生命，获得 !M! 点 弹力 。",
+    "UPGRADE_DESCRIPTION": " 随机对敌人造成 !D! 点伤害5次。 NL 失去 5 点生命，获得 !M! 点 弹力 。"
+  },
+  "LuffyMod:BazookaLv2": {
+    "NAME": "橡胶JET火箭炮",
+    "DESCRIPTION": " 造成 !D! 点伤害 。 NL 失去2点生命，给予 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "  造成 !D! 点伤害 。 NL 失去2点生命，给予  !M! 层 易伤 。"
+  },
+  "LuffyMod:ReddeHookuLv2": {
+    "NAME": "橡胶JET火拳铳",
+    "DESCRIPTION": "你每在战斗中失去生命一次，这张牌的耗能就减少 [E] 。 NL 造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "你每在战斗中失去生命一次，这张牌的耗能就减少 [E] 。 NL 造成 !D! 点伤害。"
+  },
+  "LuffyMod:AxeLv2": {
+    "NAME": "橡胶JET战斧",
+    "DESCRIPTION": " 造成 !D! 点伤害 。 NL 失去2点生命，给予全体敌人 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": " 造成 !D! 点伤害 。 NL 失去2点生命，给予全体敌人 !M! 层 易伤 。"
+  },
+  "LuffyMod:Bloodboiling": {
+    "NAME": "热血沸腾",
+    "DESCRIPTION": "每当你从一张牌中失去生命时, NL 获得 !M! 点 力量 和 弹力 。",
+    "UPGRADE_DESCRIPTION": "每当你从一张牌中失去生命时, NL 获得 !M! 点 力量 和 弹力 。"
   }
-
-
 }

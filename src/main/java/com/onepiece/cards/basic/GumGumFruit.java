@@ -1,8 +1,13 @@
 package com.onepiece.cards.basic;
 
+import basemod.AutoAdd;
 import basemod.abstracts.CustomCard;
+import basemod.cardmods.ExhaustMod;
+import basemod.helpers.CardModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.TransformCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -11,20 +16,24 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.onepiece.action.TransformCardAction;
 import com.onepiece.helpers.ModHelper;
 import com.onepiece.powers.GumGumFruitPower;
 import com.onepiece.relic.GumGumFruitRelic;
 import com.onepiece.relic.MyRelic;
 
+import java.util.ArrayList;
+
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
 
+//@AutoAdd.Ignore
 public class GumGumFruit extends CustomCard {
 
     public static final String ID = ModHelper.makePath("GumGumFruit");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME; // 读取本地化的名字
     private static final String IMG_PATH = "LuffyModRes/img/cards/Defend.png";//todo:改成橡胶果实icon
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述
     private static final CardType TYPE = CardType.POWER;
     private static final CardColor COLOR = Luffy_RED;
@@ -33,18 +42,22 @@ public class GumGumFruit extends CustomCard {
 
     public GumGumFruit() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.exhaust = true;
+//        this.exhaust = true;
+//        this.purgeOnUse = true;
+        this.isInnate = true;
 //        this.baseBlock = 5;
 //        this.tags.add(CardTags.STARTER_DEFEND);
-        this.purgeOnUse = true; // 使用后永久移除
+         // 使用后永久移除
     }
+
+
     @Override
     public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeBaseCost(0);
-//            this.upgradeBlock(3);
-        }
+//        if (!this.upgraded) {
+//            this.upgradeName();
+//            this.upgradeBaseCost(0);
+////            this.upgradeBlock(3);
+//        }
     }
 
     @Override
@@ -60,5 +73,31 @@ public class GumGumFruit extends CustomCard {
                 this.isDone = true;
             }
         });
+        // 战斗中替换 A 卡为 B 卡
+        for (AbstractCard card : new ArrayList<>(p.hand.group)) {
+            if (card.cardID.equals(Strike.ID)) {
+                AbstractDungeon.actionManager.addToBottom(new TransformCardAction(Strike.ID, new GumStrike()));
+            }
+        }
+
+        //移除卡组中的打击，加入新卡
+        for (AbstractCard card : new ArrayList<>(p.masterDeck.group)) {
+            if (card.cardID.equals(Strike.ID)) {
+                p.masterDeck.removeCard(card);
+                p.masterDeck.addToTop(new GumStrike());
+            }
+            if (card.cardID.equals(GumGumFruit.ID)) {
+                p.masterDeck.removeCard(card);
+//                p.masterDeck.addToTop(new GumStrike());
+            }
+
+        }
+//        CardModifierManager.addModifier(this, new Remov());
+//        p.masterDeck.removeCard(this);
+
+    }
+
+    public AbstractCard makeCopy() {
+        return new GumGumFruit();
     }
 }

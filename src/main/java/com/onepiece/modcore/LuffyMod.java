@@ -20,13 +20,14 @@ import com.onepiece.relic.GumGumFruitRelic;
 import com.onepiece.relic.MyRelic;
 
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 
 import static com.megacrit.cardcrawl.core.Settings.language;
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy;
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
 
 @SpireInitializer
-public class LuffyMod implements EditStringsSubscriber, EditCardsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, EditKeywordsSubscriber {
+public class LuffyMod implements EditStringsSubscriber, EditCardsSubscriber, EditCharactersSubscriber, EditRelicsSubscriber, EditKeywordsSubscriber  {
 
     // 人物选择界面按钮的图片
     private static final String MY_CHARACTER_BUTTON = "LuffyModRes/img/char/Character_Button.png";
@@ -72,6 +73,7 @@ public class LuffyMod implements EditStringsSubscriber, EditCardsSubscriber, Edi
         // 向basemod注册人物
         BaseMod.addCharacter(new LuffyChar(CardCrawlGame.playerName), MY_CHARACTER_BUTTON, MY_CHARACTER_PORTRAIT, Luffy);
     }
+
 
     @Override
     public void receiveEditCards() {
@@ -128,6 +130,8 @@ public class LuffyMod implements EditStringsSubscriber, EditCardsSubscriber, Edi
         BaseMod.loadCustomStringsFile(RelicStrings.class, "LuffyModRes/localization/" + lang + "/relics.json");
         // 添加power json
         BaseMod.loadCustomStringsFile(PowerStrings.class, "LuffyModRes/localization/" + lang + "/powers.json");
+
+
     }
 
 //    @Override

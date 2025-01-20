@@ -32,7 +32,7 @@ import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
 
 public class LuffyChar extends CustomPlayer {
     // 火堆的人物立绘（行动前）
-    private static final String MY_CHARACTER_SHOULDER_1 = "LuffyModRes/img/char/shoulder1.png";
+    private static final String MY_CHARACTER_SHOULDER_1 = "LuffyModRes/img/char/shoulder.png";
     // 火堆的人物立绘（行动后）
     private static final String MY_CHARACTER_SHOULDER_2 = "LuffyModRes/img/char/shoulder2.png";
     // 人物死亡图像
@@ -57,7 +57,7 @@ public class LuffyChar extends CustomPlayer {
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("LuffyMod:Luffy");
 
     public LuffyChar(String name) {
-        super(name, Luffy,ORB_TEXTURES, "LuffyModRes/img/UI/orb/vfx.png", LAYER_SPEED, null, null);
+        super(name, Luffy, ORB_TEXTURES, "LuffyModRes/img/UI/orb/vfx.png", LAYER_SPEED, null, null);
 
 
         // 人物对话气泡的大小，如果游戏中尺寸不对在这里修改（libgdx的坐标轴左下为原点）
@@ -86,13 +86,25 @@ public class LuffyChar extends CustomPlayer {
 
     }
 
+//    @Override
+//    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
+//        tmpPool = super.getCardPool(tmpPool);
+//        if (tmpPool.isEmpty()) {
+//            tmpPool.add(new GumGumFruit());
+//            tmpPool.add(new GumGumFruit());
+//        }
+//
+//        return tmpPool;
+//    }
+
+
     // 初始卡组的ID，可直接写或引用变量
     public ArrayList<String> getStartingDeck() {
         ArrayList<String> retVal = new ArrayList<>();
-        for(int x = 0; x<5; x++) {
+        for (int x = 0; x < 5; x++) {
             retVal.add(Strike.ID);
         }
-        for(int x = 0; x<4; x++) {
+        for (int x = 0; x < 5; x++) {
             retVal.add(Defend.ID);
         }
         retVal.add(GumGumFruit.ID);
@@ -166,6 +178,7 @@ public class LuffyChar extends CustomPlayer {
         CardCrawlGame.sound.playA("ATTACK_HEAVY", MathUtils.random(-0.2F, 0.2F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
+
 
     // 碎心图片
     @Override
