@@ -31,8 +31,8 @@ public class ElasticPower extends AbstractPower {
         this.amount = Amount;
 
         // 添加一大一小两张能力图
-        String path128 = "LuffyModRes/img/powers/Test84.png";
-        String path48 = "LuffyModRes/img/powers/Test32.png";
+        String path128 = "LuffyModRes/img/powers/ElasticPower84.png";
+        String path48 = "LuffyModRes/img/powers/ElasticPower32.png";
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
 
@@ -52,14 +52,24 @@ public class ElasticPower extends AbstractPower {
         );
     }
 
+//    @Override
+//    public void atEndOfTurn(boolean isPlayer) {
+//        // 在回合结束时移除该 Power
+//        if(isPlayer){
+//            flash(); // 播放闪光效果
+//            AbstractDungeon.actionManager.addToBottom(
+//                    new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID)
+//            );
+//        }
+//    }
+
+
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
-        // 在回合结束时移除该 Power
-        if(isPlayer){
-            flash(); // 播放闪光效果
-            AbstractDungeon.actionManager.addToBottom(
-                    new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID)
-            );
+    public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
+        if (this.amount <= 0) {
+            // 如果层数小于等于 0，移除自身
+            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));
         }
     }
 }

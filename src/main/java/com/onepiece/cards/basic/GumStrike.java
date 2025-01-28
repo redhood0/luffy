@@ -2,6 +2,7 @@ package com.onepiece.cards.basic;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.onepiece.helpers.ModHelper;
+import com.onepiece.powers.ElasticPower;
 
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
 import static com.onepiece.tag.CustomTags.GUMGUM;
@@ -27,7 +29,7 @@ public class GumStrike extends CustomCard {
     private static final CardColor COLOR = Luffy_RED;
     private static final CardRarity RARITY = CardRarity.BASIC;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 7;
     private static final int UP_DAMAGE = 3;
     private static final int MAGIC = 1;
     private static final int UP_MAGIC = 1;
@@ -92,11 +94,11 @@ public class GumStrike extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        if (ModHelper.HasEnoughElasticPower(AbstractDungeon.player, this.magicNumber)) {
-            this.baseDamage += this.magicNumber; // 根据条件动态调整伤害值
-        }
-        this.calculateCardDamage(m);
+//        if (ModHelper.HasEnoughElasticPower(AbstractDungeon.player, this.magicNumber)) {
+//            this.baseDamage += this.magicNumber; // 根据条件动态调整伤害值
+//        }
+//        this.calculateCardDamage(m);
+        this.addToBot(new ApplyPowerAction(p, p, new ElasticPower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
     }

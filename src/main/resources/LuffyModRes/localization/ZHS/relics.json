@@ -1,9 +1,9 @@
 {
   "LuffyMod:MyRelic": {
     "NAME": "草帽",
-    "FLAVOR": "这是我最重要的帽子，好好守护喔，将来你一定要还给我，当你成为出色的海贼时。",
+    "FLAVOR": "我要去伟大航路，找到ONEPIECE，然后成为海贼王！",
     "DESCRIPTIONS": [
-      "每场战斗开始时，抽 #b1 张牌。"
+      "每次击败精英或Boss都可以额外获得一个随机遗物。"
     ]
   },
   "LuffyMod:GumGumFruitRelic": {
@@ -11,6 +11,13 @@
     "FLAVOR": "超人系果实，食用者会变成橡胶人。",
     "DESCRIPTIONS": [
       "每场战斗开始时，获得橡胶果实能力。"
+    ]
+  },
+  "LuffyMod:GoingMerry": {
+    "NAME": "梅利号",
+    "FLAVOR": "一艘漂亮的小船。",
+    "DESCRIPTIONS": [
+      "在每场战斗开始时，获得12点格挡。每进入一次房间，耐久减1。","当前耐久：","点。","梅利号无法继续使用了。"
     ]
   }
 }

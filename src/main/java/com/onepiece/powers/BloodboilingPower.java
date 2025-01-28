@@ -40,8 +40,8 @@ public class BloodboilingPower extends AbstractPower {
         this.amount = Amount;
 
         // 添加一大一小两张能力图
-        String path128 = "LuffyModRes/img/powers/GearTwoPower84.png";
-        String path48 = "LuffyModRes/img/powers/GearTwoPower32.png";
+        String path128 = "LuffyModRes/img/powers/BloodboilingPower84.png";
+        String path48 = "LuffyModRes/img/powers/BloodboilingPower32.png";
         this.region128 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path128), 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(ImageMaster.loadImage(path48), 0, 0, 32, 32);
 

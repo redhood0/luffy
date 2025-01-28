@@ -26,9 +26,9 @@ public class PistolLv1 extends CustomCard {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述 "造成 !D! 点伤害。";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = Luffy_RED;
-    private static final CardRarity RARITY = CardRarity.UNCOMMON;
+    private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 9;
     private static final int UP_DAMAGE = 3;
 
     public PistolLv1() {

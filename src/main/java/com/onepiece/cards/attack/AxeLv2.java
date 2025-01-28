@@ -25,7 +25,7 @@ public class AxeLv2 extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME; // 读取本地化的名字
     private static final String IMG_PATH = "LuffyModRes/img/cards/AxeLv2.png";
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述 "造成 !D! 点伤害。";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = Luffy_RED;
@@ -66,9 +66,9 @@ public class AxeLv2 extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new LoseHPAction(p, p, costBlood));
 
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        this.addToBot(new LoseHPAction(p, p, costBlood));
 
         for (AbstractMonster monster : AbstractDungeon.getCurrRoom().monsters.monsters) {
             // 如果敌人未死亡，则对其施加虚弱

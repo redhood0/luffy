@@ -1,0 +1,113 @@
+{
+  "LuffyMod:GumGumFruitPower": {
+    "NAME": "Gum-Gum Fruit Power",
+    "DESCRIPTIONS": [
+      "When you #yendure an attack, gain #yelasticity that consumes block points."
+    ]
+  },
+  "LuffyMod:ElasticPower": {
+    "NAME": "Elasticity",
+    "DESCRIPTIONS": [
+      "Using #yElasticity enhances the abilities of a Rubber Human.",
+      " NL"
+    ]
+  },
+  "LuffyMod:RubberDrivePower": {
+    "NAME": "Rubber Drive",
+    "DESCRIPTIONS": [
+      "Whenever you consume more than 5 #yElasticity, draw 1 card."
+    ]
+  },
+  "LuffyMod:GearTwoPower": {
+    "NAME": "Gear Second",
+    "DESCRIPTIONS": [
+      " #y[Rubber] attack cards deal an additional #y"," instance of damage. At the end of the turn, lose ",
+      " HP."
+    ]
+  },
+  "LuffyMod:BloodboilingPower": {
+    "NAME": "Blood Boiling",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP from a card, gain",
+      " #yStrength and #yElasticity."
+    ]
+  },
+  "LuffyMod:FullPower": {
+    "NAME": "Satiety",
+    "DESCRIPTIONS": [
+      "Can be obtained through different [Food].",
+      " At the end of the turn, heal"," HP."
+    ]
+  },
+  "LuffyMod:BusoshokuHakiPower": {
+    "NAME": "Armament Haki",
+    "DESCRIPTIONS": [
+      "Using #yArmament Haki enhances attack damage and defense by ",
+      " points.",
+      " points, and lose 1 stack of Armament Haki."
+    ]
+  },
+  "LuffyMod:ObservationHakiPower": {
+    "NAME": "Observation Haki",
+    "DESCRIPTIONS": [
+      "Dodge the next",
+      " attacks."
+    ]
+  },
+  "LuffyMod:TeachingsOfDarkKingPower": {
+    "NAME": "Teachings of the Dark King",
+    "DESCRIPTIONS": [
+      "At the start of each turn, consume ",
+      " cards to gain ",
+      " stacks of #yArmament Haki."
+    ]
+  },
+  "LuffyMod:TwoYearSabaodyPower": {
+    "NAME": "Reunion After 2 Years",
+    "DESCRIPTIONS": [
+      "At the start of each turn, gain",
+      " random #yCrew cards."
+    ]
+  },
+  "LuffyMod:SakuraFlowPower": {
+    "NAME": "Ryou",
+    "DESCRIPTIONS": [
+      "Your next attack deals double damage and ignores Block."
+    ]
+  },
+  "LuffyMod:GearThreePower": {
+    "NAME": "Gear Third",
+    "DESCRIPTIONS": [
+      " #yGiant cards cost 2 less energy, and Elasticity consumption is reduced by 50%. Lasts for",
+      " turns. At the end of the effect, gain 2 turns of Vulnerable and Weak."
+    ]
+  },
+  "LuffyMod:SuperWeakPower": {
+    "NAME": "Super Weakness",
+    "DESCRIPTIONS": [
+      " #yAttack damage is reduced by #b50%. Duration:",
+      " turns. (Does not stack with #yWeakness)"
+    ]
+  },
+  "LuffyMod:SuperVulnerablePower": {
+    "NAME": "Super Vulnerable",
+    "DESCRIPTIONS": [
+      "Take #b75% more damage from #yAttacks. Duration:",
+      " turns. (Does not stack with #yVulnerable)"
+    ]
+  },
+  "LuffyMod:GiantFusenLv3Power": {
+    "NAME": "Rebound",
+    "DESCRIPTIONS": [
+      "Take damage and return equal damage to the attacker",
+      " times."
+    ]
+  },
+  "LuffyMod:BuggyBoomPower": {
+    "NAME": "Buggy Ball",
+    "DESCRIPTIONS": [
+      "At the end of",
+      "turns，deal "," damage to all enemies."
+    ]
+  }
+}

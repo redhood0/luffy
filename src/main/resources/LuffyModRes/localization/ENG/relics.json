@@ -1,0 +1,26 @@
+{
+  "LuffyMod:MyRelic": {
+    "NAME": "Straw Hat",
+    "FLAVOR": "My treasure? If you want it, I'll let you have it. Go find it! I left everything this world has to offer there!",
+    "DESCRIPTIONS": [
+      "Gain an additional random relic each time you defeat an Elite or Boss."
+    ]
+  },
+  "LuffyMod:GumGumFruitRelic": {
+    "NAME": "Gum-Gum Fruit?",
+    "FLAVOR": "A Paramecia-type Devil Fruit that turns the eater into a Rubber Human.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain the power of the Gum-Gum Fruit."
+    ]
+  },
+  "LuffyMod:GoingMerry": {
+    "NAME": "Going Merry",
+    "FLAVOR": "A beautiful little ship.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, gain 12 Block. Durability decreases by 1 each time you enter a room.",
+      "Current Durability:",
+      ".",
+      "The Going Merry can no longer be used."
+    ]
+  }
+}

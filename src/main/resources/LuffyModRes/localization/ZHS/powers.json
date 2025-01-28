@@ -2,31 +2,106 @@
   "LuffyMod:GumGumFruitPower": {
     "NAME": "橡胶果实能力",
     "DESCRIPTIONS": [
-      "当你成功 #y格挡 伤害时，获得 消耗格挡点数 #y弹力 。"
+      "当你 #y承受 攻击时，获得 消耗格挡点数的 #y弹力 。"
     ]
   },
   "LuffyMod:ElasticPower": {
     "NAME": "弹力",
     "DESCRIPTIONS": [
-      "利用 #y弹力 可以强化橡胶人的各项能力。"," NL 你的回合结束清空。"
-    ]
-  },
-  "LuffyMod:RubberDrivePower": {
-    "NAME": "橡胶动力",
-    "DESCRIPTIONS": [
-      "每次消耗弹力大于5点，抽1张卡。"
+      "利用 #y弹力 可以强化橡胶人的各项能力。",
+      ""
     ]
   },
   "LuffyMod:GearTwoPower": {
     "NAME": "二档",
     "DESCRIPTIONS": [
-      " #y[橡胶] 攻击牌会额外造成 #y1 次伤害 ,回合结束时 #y失去 " , "点生命。"
+      " #y[橡胶] 攻击牌会额外造成 #y"," 次伤害 ,回合结束时 #y失去 ",
+      "点生命。"
     ]
   },
   "LuffyMod:BloodboilingPower": {
     "NAME": "热血沸腾",
     "DESCRIPTIONS": [
-      "每当你从一张牌中失去生命时, 获得" , "点 #y力量 和 #y弹力 。"
+      "每当你从一张牌中失去生命时, 获得",
+      "点 #y力量 和 #y弹力 。"
+    ]
+  },
+  "LuffyMod:FullPower": {
+    "NAME": "饱食度",
+    "DESCRIPTIONS": [
+      "可以通过不同[食物]获得相应饱食度。",
+      " 在其回合结束时回复","点生命。"
+    ]
+  },
+  "LuffyMod:BusoshokuHakiPower": {
+    "NAME": "武装色霸气",
+    "DESCRIPTIONS": [
+      "利用 #y武装色霸气 可以强化攻击 伤害 和 防御 ",
+      " 点 。",
+      " 点 ，同时失去1层武装色霸气。"
+    ]
+  },
+  "LuffyMod:ObservationHakiPower": {
+    "NAME": "见闻色霸气",
+    "DESCRIPTIONS": [
+      "闪避下",
+      " 次攻击 。"
+    ]
+  },
+  "LuffyMod:TeachingsOfDarkKingPower": {
+    "NAME": "冥王的教导",
+    "DESCRIPTIONS": [
+      "每回合开始，消耗 ",
+      "张卡，获得 ",
+      " 点 武装色霸气 。"
+    ]
+  },
+  "LuffyMod:TwoYearSabaodyPower": {
+    "NAME": "2年后的再会",
+    "DESCRIPTIONS": [
+      "每回合开始，获得",
+      "张随机 #y伙伴卡 。"
+    ]
+  },
+  "LuffyMod:SakuraFlowPower": {
+    "NAME": "流樱",
+    "DESCRIPTIONS": [
+      "下一次攻击造成双倍伤害且无视格挡。"
+    ]
+  },
+  "LuffyMod:GearThreePower": {
+    "NAME": "三档",
+    "DESCRIPTIONS": [
+      " #y巨人 卡能量消耗减2，弹力消耗减少50%，剩余 #y",
+      " 次。能力结束时获得2层 #y超级易伤 和 #y超级易伤 。"
+    ]
+  },
+  "LuffyMod:SuperWeakPower": {
+    "NAME": "超级虚弱",
+    "DESCRIPTIONS": [
+      " #y攻击 造成的伤害减少 #b50% 。持续时间",
+      " 回合。(不会和 #y虚弱 叠加)"
+    ]
+  },
+  "LuffyMod:SuperVulnerablePower": {
+    "NAME": "超级易伤",
+    "DESCRIPTIONS": [
+      "从 #y攻击 受到的伤害增加 #b75% 。持续时间",
+      " 回合。(不会和 #y易伤 叠加)"
+    ]
+  },
+  "LuffyMod:GiantFusenLv3Power": {
+    "NAME": "反弹",
+    "DESCRIPTIONS": [
+      "承受伤害，并将等量伤害返还给对方",
+      " 次。"
+    ]
+  },
+  "LuffyMod:BuggyBoomPower": {
+    "NAME": "巴基特制炮弹",
+    "DESCRIPTIONS": [
+      "在 #y",
+      " 回合结束后，对所有敌人造成 #y"," 点伤害。","目标：","路飞","自己"
     ]
   }
 }

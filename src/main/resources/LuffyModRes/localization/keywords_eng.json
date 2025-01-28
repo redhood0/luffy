@@ -1,0 +1,62 @@
+[
+  {
+    "NAMES": [
+      "elasticity"
+    ],
+    "DESCRIPTION": "Using #yElasticity can enhance the abilities of a Rubber Human."
+  },
+  {
+    "NAMES": [
+      "satiety"
+    ],
+    "DESCRIPTION": "Can be obtained through different [Food]. Heal 1 HP at the end of the turn."
+  },
+  {
+    "NAMES": [
+      "armament"
+    ],
+    "DESCRIPTION": "Every 2 stacks of Armament Haki increase attack damage and block by 1 points."
+  },
+  {
+    "NAMES": [
+      "metallization"
+    ],
+    "DESCRIPTION": "Gain block at the end of each turn."
+  },
+  {
+    "NAMES": [
+      "gearsecond"
+    ],
+    "DESCRIPTION": "Rubber attack cards deal an additional instance of damage."
+  },
+  {
+    "NAMES": [
+      "gearthird"
+    ],
+    "DESCRIPTION": "Giant cards cost 2 less energy, and Elasticity consumption is reduced by 50%."
+  },
+  {
+    "NAMES": [
+      "superweak"
+    ],
+    "DESCRIPTION": "Attack damage is reduced by 50%."
+  },
+  {
+    "NAMES": [
+      "supervulnerable"
+    ],
+    "DESCRIPTION": "Take 75% more damage from Attacks"
+  },
+  {
+    "NAMES": [
+      "rebound"
+    ],
+    "DESCRIPTION": "Take damage and return equal damage to the attacker."
+  },
+  {
+    "NAMES": [
+      "companion"
+    ],
+    "DESCRIPTION": "Good companions on Luffy's adventurous journey."
+  }
+]

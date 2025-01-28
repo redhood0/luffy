@@ -2,30 +2,42 @@ package com.onepiece.characters;
 
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.blights.AbstractBlight;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Vajra;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.TrueVictoryRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.onepiece.cards.basic.Defend;
 import com.onepiece.cards.basic.GumGumFruit;
 import com.onepiece.cards.basic.Strike;
 import com.onepiece.modcore.LuffyMod;
+import com.onepiece.relic.GumGumFruitRelic;
 import com.onepiece.relic.MyRelic;
 
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Properties;
 
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy;
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
@@ -75,8 +87,7 @@ public class LuffyChar extends CustomPlayer {
                 200.0F, 220.0F, // 人物碰撞箱大小，越大的人物模型这个越大
                 new EnergyManager(3) // 初始每回合的能量
         );
-
-
+        checkRelicAndChangeImage();
         // 如果你的人物没有动画，那么这些不需要写
         // this.loadAnimation("ExampleModResources/img/char/character.atlas", "ExampleModResources/img/char/character.json", 1.8F);
         // AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
@@ -85,6 +96,30 @@ public class LuffyChar extends CustomPlayer {
 
 
     }
+
+    // 检测遗物并改变形象的方法
+    private void checkRelicAndChangeImage() {
+        if (AbstractDungeon.player != null && LuffyMod.saveField) {
+            // 如果携带了遗物，加载新的图片
+            this.img = ImageMaster.loadImage("LuffyModRes/img/char/luffy_gear1.png");
+        }
+    }
+
+//    @Override
+//    public void onVictory() {
+//        super.onVictory();
+//        // 设置默认值
+//        LuffyMod.saveField = false;
+//        try {
+//            SpireConfig config = new SpireConfig("LuffyMod", "Common");
+//            config.setBool("save_field", false);
+//            config.save();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//    }
+
 
 //    @Override
 //    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
@@ -104,7 +139,7 @@ public class LuffyChar extends CustomPlayer {
         for (int x = 0; x < 5; x++) {
             retVal.add(Strike.ID);
         }
-        for (int x = 0; x < 5; x++) {
+        for (int x = 0; x < 4; x++) {
             retVal.add(Defend.ID);
         }
         retVal.add(GumGumFruit.ID);
@@ -124,10 +159,10 @@ public class LuffyChar extends CustomPlayer {
         return new CharSelectInfo(
                 characterStrings.NAMES[0], // 人物名字
                 characterStrings.TEXT[0], // 人物介绍
-                75, // 当前血量
-                75, // 最大血量
+                78, // 当前血量
+                78, // 最大血量
                 0, // 初始充能球栏位
-                99, // 初始携带金币
+                56, // 初始携带金币
                 5, // 每回合抽牌数量
                 this, // 别动
                 this.getStartingRelics(), // 初始遗物
@@ -175,7 +210,7 @@ public class LuffyChar extends CustomPlayer {
     // 人物选择界面点击你的人物按钮时触发的方法，这里为屏幕轻微震动
     @Override
     public void doCharSelectScreenSelectEffect() {
-        CardCrawlGame.sound.playA("ATTACK_HEAVY", MathUtils.random(-0.2F, 0.2F));
+        CardCrawlGame.sound.playA("luffy:luffystart", MathUtils.random(0.0F, 0.1F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
 
@@ -194,8 +229,10 @@ public class LuffyChar extends CustomPlayer {
     // 自定义模式选择你的人物时播放的音效
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
-        return "ATTACK_HEAVY";
+
+        return "luffy:luffystart";
     }
+
 
     // 游戏中左上角显示在你的名字之后的人物名称
     @Override
@@ -236,7 +273,9 @@ public class LuffyChar extends CustomPlayer {
     // 第三章面对心脏造成伤害时的特效
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
-        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL};
+        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.BLUNT_LIGHT, AbstractGameAction.AttackEffect.BLUNT_LIGHT, AbstractGameAction.AttackEffect.BLUNT_LIGHT, AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.BLUNT_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.BLUNT_HEAVY};
+
+//        return new AbstractGameAction.AttackEffect[]{AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL, AbstractGameAction.AttackEffect.SLASH_HEAVY, AbstractGameAction.AttackEffect.FIRE, AbstractGameAction.AttackEffect.SLASH_DIAGONAL};
     }
 
     // 以下为原版人物枚举、卡牌颜色枚举扩展的枚举，需要写，接下来要用
@@ -262,4 +301,6 @@ public class LuffyChar extends CustomPlayer {
         @SpireEnum
         public static CardLibrary.LibraryType Luffy_RED;
     }
+
+
 }

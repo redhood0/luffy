@@ -42,7 +42,7 @@ public class GatlingLv1 extends CustomCard {
         this.magicNumber = this.baseMagicNumber = 2;
         this.costElasticNum = 8; // 初始化自定义参数 1
         this.addATKTimeNum = 3; // 初始化自定义参数 2
-        this.exhaust = true;
+//        this.exhaust = true;
 
         this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0] + this.costElasticNum + EXTENDED_DESCRIPTION[1] + this.addATKTimeNum + EXTENDED_DESCRIPTION[2];
         this.initializeDescription();
@@ -59,8 +59,8 @@ public class GatlingLv1 extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.exhaust = false;
-
+//            this.exhaust = false;
+            this.upgradeDamage(1);
 //            this.upgradeMagicNumber(1);
             // 加上以下两行就能使用UPGRADE_DESCRIPTION了（如果你写了的话）
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION + EXTENDED_DESCRIPTION[0] + this.costElasticNum + EXTENDED_DESCRIPTION[1] + this.addATKTimeNum + EXTENDED_DESCRIPTION[2];;

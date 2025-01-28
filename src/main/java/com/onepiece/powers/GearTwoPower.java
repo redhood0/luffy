@@ -1,5 +1,6 @@
 package com.onepiece.powers;
 
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -46,12 +47,20 @@ public class GearTwoPower extends AbstractPower {
 
         // 首次添加能力更新描述
         this.updateDescription();
+
+        Texture newTexture = new Texture("LuffyModRes/img/char/luffy_gear2.png");
+        AbstractDungeon.player.img = newTexture;
+
+        CardCrawlGame.sound.playV("luffy:gear2", 1.0f);
+
     }
+
+
 
     // 能力在更新时如何修改描述
     public void updateDescription() {
 //        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount / 5 + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
     }
 
 //    public float atDamageGive(float damage, DamageInfo.DamageType type, AbstractCard card) {
@@ -71,23 +80,26 @@ public class GearTwoPower extends AbstractPower {
         if (card.tags.contains(GUMGUM_ATK)) {
             flash(); // 播放一个视觉效果
             // 触发额外攻击
-            AbstractDungeon.actionManager.addToBottom(
-                    new DamageAction(
-                            action.target,
-                            new DamageInfo(this.owner, card.damage, DamageInfo.DamageType.NORMAL),
-                            AbstractGameAction.AttackEffect.SLASH_HORIZONTAL
-                    )
-            );
+            for (int i = 0; i < this.amount / 5; i++) {
+                AbstractDungeon.actionManager.addToBottom(
+                        new DamageAction(
+                                action.target,
+                                new DamageInfo(this.owner, card.damage, DamageInfo.DamageType.NORMAL),
+                                AbstractGameAction.AttackEffect.BLUNT_HEAVY
+                        )
+                );
+            }
+
         }
     }
 
 
-//
-//    public static void addAmount(int amount) {
-//        AbstractDungeon.actionManager.addToBottom(
-//                new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ElasticPower(AbstractDungeon.player, amount), amount)
-//        );
-//    }
+    public void onVictory() {
+        Texture newTexture = new Texture("LuffyModRes/img/char/luffy_gear1.png");
+
+       AbstractDungeon.player.img = newTexture;
+    }
+
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {

@@ -2,6 +2,7 @@ package com.onepiece.cards.skill;
 
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -26,15 +27,16 @@ public class Recharge extends CustomCard {
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述
     private static final CardType TYPE = CardType.SKILL;
     private static final CardColor COLOR = Luffy_RED;
-    private static final CardRarity RARITY = CardRarity.COMMON;
+    private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
 
     public Recharge() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 //        this.baseBlock = 14;
         this.magicNumber = this.baseMagicNumber = 8;
-        this.retain = true;
+        this.exhaust = true;
 //        this.tags.add(GUMGUM);
+
 
     }
 
@@ -42,13 +44,13 @@ public class Recharge extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+//            this.selfRetain = true;
             this.isInnate = true;
+            this.upgradeMagicNumber(2);
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
     }
-
-
 
 
     @Override
@@ -56,6 +58,10 @@ public class Recharge extends CustomCard {
 
 //        this.addToBot(new GainBlockAction(p, p, this.block));
         this.addToBot(new ApplyPowerAction(p, p, new ElasticPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new DrawCardAction(p, 1));
+//        if(this.upgraded) {
+//
+//        }
     }
 
     public AbstractCard makeCopy() {

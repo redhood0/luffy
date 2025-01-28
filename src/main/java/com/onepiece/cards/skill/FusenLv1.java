@@ -17,6 +17,7 @@ import com.onepiece.powers.ElasticPower;
 
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
 import static com.onepiece.tag.CustomTags.GUMGUM;
+import static com.onepiece.tag.CustomTags.GUMGUM_DEF;
 
 public class FusenLv1 extends CustomCard {
     public static final String ID = ModHelper.makePath("FusenLv1");
@@ -36,13 +37,14 @@ public class FusenLv1 extends CustomCard {
 //        this.magicNumber = this.baseMagicNumber = 14;
         this.exhaust = true;
         this.tags.add(GUMGUM);
-
+        this.tags.add(GUMGUM_DEF);
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
+            this.selfRetain = true;
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
         }
@@ -51,9 +53,9 @@ public class FusenLv1 extends CustomCard {
     @Override
     public void applyPowers() {
         double times = 1;
-        if (this.upgraded) {
-            times = 1.5;
-        }
+//        if (this.upgraded) {
+//            times = 1.5;
+//        }
         this.baseBlock = (int) (ModHelper.GetElasticPowerNum(AbstractDungeon.player) * times);
         super.applyPowers();
 //        if (this.upgraded) {

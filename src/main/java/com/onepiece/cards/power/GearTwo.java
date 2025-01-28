@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.onepiece.helpers.ModHelper;
 import com.onepiece.powers.GearTwoPower;
-import com.onepiece.powers.RubberDrivePower;
 
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
 import static com.onepiece.tag.CustomTags.GEAR;
@@ -20,7 +19,7 @@ public class GearTwo extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME; // 读取本地化的名字
     private static final String IMG_PATH = "LuffyModRes/img/cards/GearTwo.png";//todo:改成橡胶果实icon
-    private static final int COST = 3;
+    private static final int COST = 2;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述
     private static final CardType TYPE = CardType.POWER;
     private static final CardColor COLOR = Luffy_RED;
@@ -40,7 +39,7 @@ public class GearTwo extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
 //            this.upgradeMagicNumber(-2);
-            this.upgradeBaseCost(2);
+            this.upgradeBaseCost(1);
 //            this.upgradeBlock(3);
         }
     }
@@ -53,6 +52,7 @@ public class GearTwo extends CustomCard {
     }
 //        CardModifierManager.addModifier(this, new Remov());
 //        p.masterDeck.removeCard(this);
+
 
 
     public AbstractCard makeCopy() {

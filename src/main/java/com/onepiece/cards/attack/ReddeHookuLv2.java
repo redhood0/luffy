@@ -31,8 +31,8 @@ public class ReddeHookuLv2 extends CustomCard {
     private static final CardColor COLOR = Luffy_RED;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int DAMAGE = 30;
-    private static final int UP_DAMAGE = 5;
+    private static final int DAMAGE = 27;
+    private static final int UP_DAMAGE = 8;
 
     public int costBlood; // 自定义参数 1
 

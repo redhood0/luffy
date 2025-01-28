@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.onepiece.helpers.ModHelper;
@@ -24,7 +25,7 @@ public class GatlingLv2 extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME; // 读取本地化的名字
     private static final String IMG_PATH = "LuffyModRes/img/cards/GatlingLv2.png";
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述 "造成 !D! 点伤害。";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = Luffy_RED;
@@ -40,7 +41,7 @@ public class GatlingLv2 extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
-        this.magicNumber = this.baseMagicNumber = 10;
+        this.magicNumber = this.baseMagicNumber = 8;
         this.costBlood = 5;
 
         // 添加自定义标签
@@ -55,7 +56,7 @@ public class GatlingLv2 extends CustomCard {
         if (!this.upgraded) {
             this.upgradeName();
             this.upgradeDamage(UP_DAMAGE);
-            this.upgradeMagicNumber(5);
+//            this.upgradeMagicNumber(4);
             // 加上以下两行就能使用UPGRADE_DESCRIPTION了（如果你写了的话）
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
@@ -65,12 +66,44 @@ public class GatlingLv2 extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        for (int i = 0; i < this.magicNumber; ++i) {
-            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        }
         this.addToBot(new LoseHPAction(p, p, costBlood));
-        this.addToBot(new ApplyPowerAction(p, p, new ElasticPower(p, this.magicNumber), this.magicNumber));
+        //先打5下
+        for (int i = 0; i < 5; ++i) {
+            this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        }
+        //再打
+        if (p.hasPower(ElasticPower.POWER_ID)) {
+            int num = (int) Math.floor((double) (p.getPower(ElasticPower.POWER_ID).amount / this.magicNumber));
+            if (num > 0) {
+                for (int i = 0; i < num; ++i) {
+                    this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                }
+            }
+        }
+    }
+
+    public int checkNum(){
+        int num = 0;
+        //再打
+        if (AbstractDungeon.player.hasPower(ElasticPower.POWER_ID)) {
+            num = (int) Math.floor((double) (AbstractDungeon.player.getPower(ElasticPower.POWER_ID).amount / this.magicNumber));
+
+        }
+        return num;
+    }
+
+    public void applyPowers() {
+
+        super.applyPowers();
+
+        if (!this.upgraded) {
+            this.rawDescription = CARD_STRINGS.DESCRIPTION;
+        } else {
+            this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
+        }
+
+        this.rawDescription = this.rawDescription + CARD_STRINGS.EXTENDED_DESCRIPTION[0] + checkNum() + CARD_STRINGS.EXTENDED_DESCRIPTION[1];
+        this.initializeDescription();
     }
 
     public AbstractCard makeCopy() {

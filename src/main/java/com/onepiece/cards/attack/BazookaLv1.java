@@ -40,8 +40,8 @@ public class BazookaLv1 extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         this.baseDamage = 16;
-        this.magicNumber = this.baseMagicNumber = 10;
-//        this.costElasticNum = 8; // 初始化自定义参数 1
+        this.magicNumber = this.baseMagicNumber = 2;
+        this.costElasticNum = 10; // 初始化自定义参数 1
 //        this.addATKTimeNum = 3; // 初始化自定义参数 2
 //        this.exhaust = true;
 
@@ -60,7 +60,8 @@ public class BazookaLv1 extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(8);
+            this.upgradeDamage(2);
+            this.upgradeMagicNumber(1);
             // 加上以下两行就能使用UPGRADE_DESCRIPTION了（如果你写了的话）
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
@@ -82,9 +83,10 @@ public class BazookaLv1 extends CustomCard {
 
         this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
 
-        if (ModHelper.HasEnoughElasticPower(AbstractDungeon.player, this.magicNumber)) {
+        if (ModHelper.HasEnoughElasticPower(AbstractDungeon.player, costElasticNum)) {
 //            this.magicNumber += this.addATKTimeNum; // 根据条件动态调整攻击次数
-            this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1));
+            this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+
         }
 
     }

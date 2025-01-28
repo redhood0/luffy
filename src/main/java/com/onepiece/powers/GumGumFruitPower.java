@@ -52,14 +52,17 @@ public class GumGumFruitPower extends AbstractPower {
     // 被攻击时
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.owner != null && info.type != DamageInfo.DamageType.HP_LOSS && info.type != DamageInfo.DamageType.THORNS) {
-            flash(); // 播放闪光效果
-            ElasticPower.addAmount(damageAmount);
+//            flash(); // 播放闪光效果
+//            ElasticPower.addAmount(damageAmount);
 
-            // 如果没有受到伤害，表示格挡住了
-//            if (damageAmount <= 0) {
-//                flash(); // 播放闪光效果
-//                ElasticPower.addAmount(info.output);
-//            }
+//             如果没有受到伤害，表示格挡住了
+            if (damageAmount <= 0) {
+                flash(); // 播放闪光效果
+                ElasticPower.addAmount(info.output);//这个是敌人的伤害
+            }else {
+                //             如果受到伤害，获得挡住的格挡值
+                ElasticPower.addAmount(info.output-damageAmount);
+            }
         }
         return damageAmount;
     }

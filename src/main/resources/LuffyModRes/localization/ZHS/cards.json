@@ -1,18 +1,23 @@
 {
   "LuffyMod:Strike": {
     "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 ",
+    "DESCRIPTION": "造成 !D! 点伤害。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。"
   },
   "LuffyMod:GumStrike": {
     "NAME": "橡胶打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 !M! 点伤害。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 !M! 点伤害。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 点 弹力 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL  获得 !M! 点 弹力 。"
   },
   "LuffyMod:Defend": {
     "NAME": "防御",
     "DESCRIPTION": "获得 !B! 点格挡。",
     "UPGRADE_DESCRIPTION": " 获得 !B! 点格挡。"
+  },
+  "LuffyMod:GumDefends": {
+    "NAME": "橡胶防御",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 失去 !M! 点 弹力 ,下次攻击额外造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": " 获得 !B! 点格挡。 NL 失去 !M! 点 弹力 ,下次攻击额外造成 !M! 点伤害。"
   },
   "LuffyMod:GumGumFruit": {
     "NAME": "奇怪花纹的果实",
@@ -26,7 +31,7 @@
   },
   "LuffyMod:GatlingLv1": {
     "NAME": "橡胶机关枪",
-    "DESCRIPTION": " 消耗 。造成 !D! 点伤害 !M! 次。",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
     "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 !M! 次。",
     "EXTENDED_DESCRIPTION": [
       " NL 失去",
@@ -37,12 +42,12 @@
   "LuffyMod:FusenLv1": {
     "NAME": "橡胶气球",
     "DESCRIPTION": " 消耗 。 将你的 弹力 转化为相同的点数的 格挡 。",
-    "UPGRADE_DESCRIPTION": "消耗 。 将你的 弹力 转化为1.5倍点数的 格挡 。"
+    "UPGRADE_DESCRIPTION": "消耗 。 保留 。 将你的 弹力 转化为相同的点数的 格挡 。"
   },
   "LuffyMod:Recharge": {
-    "NAME": "橡胶蓄力",
-    "DESCRIPTION": " 保留 。 获得 !M! 点 弹力 。",
-    "UPGRADE_DESCRIPTION": " 保留 。 固有 。 NL 获得 !M! 点 弹力 。"
+    "NAME": "橡胶充能",
+    "DESCRIPTION": " 消耗 。 NL 获得 !M! 点 弹力 。抽 1张牌。",
+    "UPGRADE_DESCRIPTION": " 消耗 。 固有 。 NL 获得 !M! 点 弹力 。抽 1张牌。"
   },
   "LuffyMod:RifleLv1": {
     "NAME": "橡胶螺旋弹",
@@ -51,13 +56,13 @@
   },
   "LuffyMod:RubberDrive": {
     "NAME": "橡胶动力",
-    "DESCRIPTION": "每当 !M! 点及更多弹力被 使用 NL ,抽1张牌。",
-    "UPGRADE_DESCRIPTION": "每当 !M! 点及更多弹力被 使用 NL ,抽1张牌。"
+    "DESCRIPTION": "抽 2 张牌。 NL 失去 !M! 点弹力 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": "抽 3 张牌。 NL 失去 !M! 点弹力 获得 [E] [E] 。"
   },
   "LuffyMod:BazookaLv1": {
     "NAME": "橡胶火箭炮",
-    "DESCRIPTION": "造成 !D! 点伤害 。 NL 失去 10 弹力 给予 1层 易伤。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 。 NL 失去 10 弹力 给予 1层 易伤。"
+    "DESCRIPTION": "造成 !D! 点伤害 。 NL 失去 10 弹力 给予 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害 。 NL 失去 10 弹力 给予 !M! 层 易伤 。"
   },
   "LuffyMod:GearTwo": {
     "NAME": "二档",
@@ -66,18 +71,22 @@
   },
   "LuffyMod:PistolLv2": {
     "NAME": "橡胶JET手枪",
-    "DESCRIPTION": " 造成 !D! 点伤害。 NL 失去 2 点生命，获得 !M! 点 弹力 。",
-    "UPGRADE_DESCRIPTION": " 造成 !D! 点伤害。 NL 失去 2 点生命，获得 !M! 点 弹力 。"
+    "DESCRIPTION": " 失去 1 点生命。 NL 造成 !D! 点伤害，获得 !M! 点 弹力 。",
+    "UPGRADE_DESCRIPTION": " 失去 1 点生命。 NL 造成 !D! 点伤害，获得 !M! 点 弹力 。"
   },
   "LuffyMod:GatlingLv2": {
     "NAME": "橡胶JET机关枪",
-    "DESCRIPTION": " 随机对敌人造成 !D! 点伤害5次。 NL 失去 5 点生命，获得 !M! 点 弹力 。",
-    "UPGRADE_DESCRIPTION": " 随机对敌人造成 !D! 点伤害5次。 NL 失去 5 点生命，获得 !M! 点 弹力 。"
+    "DESCRIPTION": " 失去 5 点生命。 NL 对敌人造成 !D! 点伤害 5 次。 NL 每存在 !M! 点弹力，额外造成 1次伤害",
+    "UPGRADE_DESCRIPTION": " 失去 5 点生命。 NL 对敌人造成 !D! 点伤害 5 次。 NL 每存在 !M! 点弹力，额外造成 1次伤害",
+    "EXTENDED_DESCRIPTION": [
+      "( *",
+      " ) "
+    ]
   },
   "LuffyMod:BazookaLv2": {
     "NAME": "橡胶JET火箭炮",
-    "DESCRIPTION": " 造成 !D! 点伤害 。 NL 失去2点生命，给予 !M! 层 易伤 。",
-    "UPGRADE_DESCRIPTION": "  造成 !D! 点伤害 。 NL 失去2点生命，给予  !M! 层 易伤 。"
+    "DESCRIPTION": "失去2点生命。 NL  造成 !D! 点伤害 ，给予 !M! 层 易伤 。",
+    "UPGRADE_DESCRIPTION": "失去2点生命。 NL  造成 !D! 点伤害 ，给予 !M! 层 易伤 。"
   },
   "LuffyMod:ReddeHookuLv2": {
     "NAME": "橡胶JET火拳铳",
@@ -86,12 +95,254 @@
   },
   "LuffyMod:AxeLv2": {
     "NAME": "橡胶JET战斧",
-    "DESCRIPTION": " 造成 !D! 点伤害 。 NL 失去2点生命，给予全体敌人 !M! 层 易伤 。",
-    "UPGRADE_DESCRIPTION": " 造成 !D! 点伤害 。 NL 失去2点生命，给予全体敌人 !M! 层 易伤 。"
+    "DESCRIPTION": "失去2点生命。 NL 造成 !D! 点伤害 ，给予全体敌人 !M! 层 虚弱 。",
+    "UPGRADE_DESCRIPTION": "失去2点生命。 NL 造成 !D! 点伤害 ，给予全体敌人 !M! 层 虚弱 。"
   },
   "LuffyMod:Bloodboiling": {
     "NAME": "热血沸腾",
     "DESCRIPTION": "每当你从一张牌中失去生命时, NL 获得 !M! 点 力量 和 弹力 。",
     "UPGRADE_DESCRIPTION": "每当你从一张牌中失去生命时, NL 获得 !M! 点 力量 和 弹力 。"
+  },
+  "LuffyMod:MeatBone": {
+    "NAME": "食物-带骨肉",
+    "DESCRIPTION": " 消耗 。获得 !M! 点 饱食度 , NL 生命值低于 50% 时回复9生命。",
+    "UPGRADE_DESCRIPTION": " 消耗 。获得 !M! 点 饱食度 , NL 生命值低于 50% 时回复12生命。"
+  },
+  "LuffyMod:Pilaf": {
+    "NAME": "食物-炒饭",
+    "DESCRIPTION": " 消耗 。获得 !M! 点 饱食度 , NL 获得 [E] 。",
+    "UPGRADE_DESCRIPTION": " 消耗 。获得 !M! 点 饱食度 , NL 获得 [E]  [E] 。"
+  },
+  "LuffyMod:WeddingCake": {
+    "NAME": "食物-大蛋糕",
+    "DESCRIPTION": " 消耗 。获得 !M! 点 饱食度 , NL 获得 1层 人工制品 。",
+    "UPGRADE_DESCRIPTION": "消耗 。获得 !M! 点 饱食度 , NL 获得 2层 人工制品 。"
+  },
+  "LuffyMod:LifeReturn": {
+    "NAME": "生命归还",
+    "DESCRIPTION": "失去全部 饱食度 ,获得等量 [E] 和手牌。 消耗 。",
+    "UPGRADE_DESCRIPTION": "失去全部 饱食度 ,获得等量 [E] 和手牌。 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "生命值必须低于 20点 才能使用。"
+    ]
+  },
+  "LuffyMod:IsMyGuest": {
+    "NAME": "肚子饿的人，就是我的客人",
+    "DESCRIPTION": "如果没有 饱食度 ，则获得 !M! 个随机 食物 。",
+    "UPGRADE_DESCRIPTION": "如果没有 饱食度 ，则获得 !M! 个随机 食物 。"
+  },
+  "LuffyMod:Panacea": {
+    "NAME": "我想要成为万灵药",
+    "DESCRIPTION": " 消耗 。随机移除1个负面效果。 NL 如果没有药水，则获得1个随机药水。",
+    "UPGRADE_DESCRIPTION": " 消耗 。随机移除2个负面效果。 NL 如果没有药水，则获得1个随机药水。"
+  },
+  "LuffyMod:HaoshokuHaki": {
+    "NAME": "霸王色威慑",
+    "DESCRIPTION": " 消耗 。所有敌人失去 !M! 力量 1回合。 NL 生命值低于己方的敌人， 眩晕 1回合。",
+    "UPGRADE_DESCRIPTION": " 消耗 。所有敌人失去 !M! 力量 1回合。 NL 生命值低于己方的敌人， 眩晕 1回合。"
+  },
+  "LuffyMod:BusoshokuTrain": {
+    "NAME": "武装色修炼",
+    "DESCRIPTION": " 消耗 。获得 !M! 点 武装色霸气 。抽 1张牌。",
+    "UPGRADE_DESCRIPTION": " 消耗 。获得 !M! 点 武装色霸气 。抽 1张牌。"
+  },
+  "LuffyMod:ObservationHaki": {
+    "NAME": "见闻色霸气",
+    "DESCRIPTION": " 闪避下 !M! 次敌人攻击。",
+    "UPGRADE_DESCRIPTION": " 闪避下 !M! 次敌人攻击。"
+  },
+  "LuffyMod:ObservationForesight": {
+    "NAME": "见闻色-预知未来",
+    "DESCRIPTION": " 预见 !M! 。 抽1张卡 。 ",
+    "UPGRADE_DESCRIPTION": " 预见 !M! 。 抽1张卡 。 "
+  },
+  "LuffyMod:TeachingsOfDarkKing": {
+    "NAME": "冥王的教导",
+    "DESCRIPTION": "每回合开始， 消耗 1张卡，获得 2 点 武装色霸气 。 ",
+    "UPGRADE_DESCRIPTION": " 固有 。每回合开始，消耗1张卡，获得 2 点 武装色霸气 。 "
+  },
+  "LuffyMod:BloodAcceleration": {
+    "NAME": "血液加速",
+    "DESCRIPTION": "失去2点 生命 。 NL 抽 !M! 张牌。 你打出的下一张攻击牌耗能变为0。 消耗 。 ",
+    "UPGRADE_DESCRIPTION": "失去2点 生命 。 NL 抽 !M! 张牌。 你打出的下一张攻击牌耗能变为0。 消耗 。  "
+  },
+  "LuffyMod:SoulKing": {
+    "NAME": "布鲁克：灵魂之王",
+    "DESCRIPTION": "将弃牌堆中的 !M! 张牌放到手牌中。 消耗 。 ",
+    "UPGRADE_DESCRIPTION": "将弃牌堆中的 !M! 张牌放到手牌中。",
+    "EXTENDED_DESCRIPTION": [
+      "选择卡牌加入手牌"
+    ]
+  },
+  "LuffyMod:FrankSuper": {
+    "NAME": "弗兰奇：Super！",
+    "DESCRIPTION": "随机升级1张手牌。 消耗 。 ",
+    "UPGRADE_DESCRIPTION": "升级1张选定的手牌。 消耗 。 ",
+    "EXTENDED_DESCRIPTION": [
+      "选择卡牌进行强化"
+    ]
+  },
+  "LuffyMod:ISmellAVG": {
+    "NAME": "我闻到了冒险的味道",
+    "DESCRIPTION": "丢弃所有手牌。 NL 然后抽相同数量张牌。",
+    "UPGRADE_DESCRIPTION": "丢弃所有手牌。 NL 然后抽相同数量+1张牌。 "
+  },
+  "LuffyMod:Yohohoho": {
+    "NAME": "哟吼吼吼",
+    "DESCRIPTION": "奏响灵魂之曲，给予所有敌人 !M! 次随机负面状态。\n 消耗 。",
+    "UPGRADE_DESCRIPTION": "奏响灵魂之曲，给予所有敌人 !M! 次随机负面状态。\n 消耗 。"
+  },
+  "LuffyMod:WantToLive": {
+    "NAME": "我想活下去！",
+    "DESCRIPTION": "发现 1张随机 *无色牌 ,重复 !M! 次。\n 该牌在本回合耗能变为 0 。\n 消耗 。",
+    "UPGRADE_DESCRIPTION": "发现 1张随机 *无色牌 ,重复 !M! 次。\n 该牌在本回合耗能变为 0 。\n 消耗 。"
+  },
+  "LuffyMod:ThinkWhatUHave": {
+    "NAME": "好好想你还拥有什么",
+    "DESCRIPTION": " *抽牌堆 和 *手牌 中每有一张 *伙伴卡 获得 !M! 点 格挡 。 NL ",
+    "UPGRADE_DESCRIPTION": " *抽牌堆 和 *手牌 中每有一张 *伙伴卡 获得 !M! 点 格挡 。 NL ",
+    "EXTENDED_DESCRIPTION": [
+      "当前获得 *"," 点 格挡 。"
+    ]
+  },
+  "LuffyMod:TwoYearSabaody": {
+    "NAME": "两年后，香波地群岛",
+    "DESCRIPTION": "每回合开始，将1张随机 *伙伴卡 加入手牌。 ",
+    "UPGRADE_DESCRIPTION": "每回合开始，将1张随机 *伙伴卡 加入手牌。 "
+  },
+  "LuffyMod:HaveWay": {
+    "NAME": "~~风和海的话我就有办法",
+    "DESCRIPTION": " 你在选择下一层的路线时有可以无视当前的路线。 消耗 。",
+    "UPGRADE_DESCRIPTION": " 你在选择下一层的路线时有可以无视当前的路线。 消耗 。",
+    "EXTENDED_DESCRIPTION": [
+      "剩余跳转次数："
+    ]
+  },
+  "LuffyMod:NothingHappen": {
+    "NAME": "什么也没有发生",
+    "DESCRIPTION": " 保留 1回合。 不能被打出 。 NL 当你要被杀死时从 *手牌 触发，免死并回复到 20 点 生命 ，然后卡组移除这张卡。",
+    "UPGRADE_DESCRIPTION": " 保留 。 不能被打出 。 NL 当你要被杀死时从 *手牌 触发，免死并回复到 20 点 生命 ，然后卡组移除这张卡。",
+    "EXTENDED_DESCRIPTION": [
+      " 不能被打出 。"
+    ]
+  },
+  "LuffyMod:DosFleur": {
+    "NAME": "二轮花-掌控",
+    "DESCRIPTION": " 抽2张卡，使其临时 保留 一回合。",
+    "UPGRADE_DESCRIPTION": " 抽2张卡，使其在本场战斗中 保留 。",
+    "EXTENDED_DESCRIPTION": [
+      " 临时 保留 。"
+    ]
+  },
+  "LuffyMod:FrankyGeneral": {
+    "NAME": "弗兰奇将军",
+    "DESCRIPTION": "造成 !D! 点范围伤害，获得 !B! 点护甲。\n能被多次 升级 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点范围伤害，获得 !B! 点护甲。\n能被多次 升级 。"
+  },
+  "LuffyMod:GuardPoint": {
+    "NAME": "毛皮强化",
+    "DESCRIPTION": "获得 !B! 点护甲 !M! 次。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点护甲 !M! 次。"
+  },
+  "LuffyMod:KeepMyMoney": {
+    "NAME": "我的钱是不会给你们的",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，获得 !M! 金币。 NL 如果敌人是盗贼，直接 斩杀 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 斩杀 时，获得 !M! 金币。 NL 如果敌人是盗贼，直接 斩杀 。"
+  },
+  "LuffyMod:HakiHardening": {
+    "NAME": "硬化防御",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 最多使用 !M! 点 武装色霸气 ,获得 !M! * 8 点格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 最多使用 !M! 点 武装色霸气 , NL 获得 !M! 点格挡 。"
+  },
+  "LuffyMod:SakuraFlow": {
+    "NAME": "流樱",
+    "DESCRIPTION": "使用 !M! 点 武装色霸气，下一次攻击造成双倍伤害且无视 格挡 。",
+    "UPGRADE_DESCRIPTION": "使用 !M! 点 武装色霸气，下一次攻击造成双倍伤害且无视 格挡 。"
+  },
+  "LuffyMod:GearThree": {
+    "NAME": "三档",
+    "DESCRIPTION": "获得 !B! 点 格挡 。 NL 后 !M! 张 巨人 卡费用消耗减2， 弹力 消耗减50%。 ",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 NL 后 !M! 张 巨人 卡费用消耗减2， 弹力 消耗减50%。 "
+  },
+  "LuffyMod:GigantPistolLv3": {
+    "NAME": "橡胶巨人手枪",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 !M! 点伤害。"
+  },
+  "LuffyMod:GigantAxeLv3": {
+    "NAME": "橡胶巨人战斧",
+    "DESCRIPTION": "造成 !D! 点伤害,给予敌人 1 层 超级虚弱。 NL 失去 !M! 点 弹力 给予全体敌人 1 层 超级虚弱 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,给予敌人 1 层 超级虚弱 。 NL 失去 !M! 点 弹力 给予全体敌人 2 层 超级虚弱 。"
+  },
+  "LuffyMod:GigantWhipLv3": {
+    "NAME": "橡胶巨人鞭",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 5 点伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 5 点伤害。"
+  },
+  "LuffyMod:GigantBazookaLv3": {
+    "NAME": "橡胶巨人火箭炮",
+    "DESCRIPTION": "造成 !D! 点伤害,给予敌人 1 层 超级易伤 。 NL 失去 !M! 点 弹力 给予敌人 1 层 超级易伤 。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害,给予敌人 1 层 超级易伤 。 NL 失去 !M! 点 弹力 给予全体敌人 2 层 超级易伤 。"
+  },
+  "LuffyMod:GigantFusenLv3": {
+    "NAME": "橡胶巨人气球",
+    "DESCRIPTION": "获得 !B! 点格挡， NL 反弹 下 1 次受到的伤害。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡， NL 反弹 下 1 次受到的伤害。"
+  },
+  "LuffyMod:GiantThrustLv3": {
+    "NAME": "橡胶巨人推掌",
+    "DESCRIPTION": "获得 !B! 点格挡， NL 失去 !M! 点 弹力 , 对指定敌人造成你当前 格挡 值的伤害。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡， NL 失去 !M! 点 弹力 , 对指定敌人造成你当前 格挡 值的伤害。"
+  },
+  "LuffyMod:GumDefend": {
+    "NAME": "橡胶盾",
+    "DESCRIPTION": "获得 !B! 点格挡 ， NL 失去 !M! 点 弹力 增加 !M! 点格挡。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡 ， NL 失去 !M! 点 弹力 增加 !M! 点格挡。"
+  },
+  "LuffyMod:GumWeb": {
+    "NAME": "橡胶网",
+    "DESCRIPTION": "获得 !B! 点 格挡 ， NL 将弃牌堆中的1张牌放到抽牌堆的顶部。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 ， NL 将弃牌堆中的2张牌放到抽牌堆的顶部。"
+  },
+  "LuffyMod:MigawariLv2": {
+    "NAME": "橡胶JET替罪羊",
+    "DESCRIPTION": "失去1点生命， 消耗 抽牌堆顶部1张牌， NL 获得 !B! 点格挡。",
+    "UPGRADE_DESCRIPTION": "失去1点生命， 消耗 抽牌堆顶部1张牌， NL 获得 !B! 点格挡。"
+  },
+  "LuffyMod:ObservationPerception": {
+    "NAME": "见闻色-气息感知",
+    "DESCRIPTION": "预见 !M! ，每有一名敌人的意图是攻击，获得 !B! 护甲。",
+    "UPGRADE_DESCRIPTION": "预见 !M! ，每有一名敌人的意图是攻击，获得 !B! 护甲。"
+  },
+  "LuffyMod:RiffleLv2": {
+    "NAME": "橡胶JET回转弹",
+    "DESCRIPTION": "失去 2点生命，造成 !D! 点伤害，抽1张牌。 NL 每当你从一张牌中失去生命时，将这张牌从弃牌堆放回你的手牌。",
+    "UPGRADE_DESCRIPTION": "失去 2点生命，造成 !D! 点伤害，抽1张牌。 NL 每当你从一张牌中失去生命时，将这张牌从弃牌堆放回你的手牌。"
+  },
+  "LuffyMod:WhipLv1": {
+    "NAME": "橡胶鞭",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 3 点伤害。",
+    "UPGRADE_DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 失去 !M! 点 弹力 增加 3 点伤害。"
+  },
+  "LuffyMod:DreamBeLaughed": {
+    "NAME": "~~~伙伴的梦想被嘲笑的时候",
+    "DESCRIPTION": "获得 !B! 点格挡，将一张 *受伤 置于抽牌堆顶部。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡，将一张 *受伤 置于抽牌堆顶部。"
+  },
+  "LuffyMod:GumBoh": {
+    "NAME": "橡胶发呆",
+    "DESCRIPTION": " 预见 !M! ， 获得 !B! 点格挡。 NL 结束你的回合。",
+    "UPGRADE_DESCRIPTION": " 预见 !M! ， 获得 !B! 点格挡。 NL 结束你的回合。"
+  },
+  "LuffyMod:OkamaWay": {
+    "NAME": "人妖之道",
+    "DESCRIPTION": " 消耗。 NL 从抽牌堆选择1张牌,获得1张该牌 消耗 的复制体。",
+    "UPGRADE_DESCRIPTION": "从抽牌堆选择1张牌,获得1张该牌 消耗 的复制体。"
+  },
+  "LuffyMod:BuggyBoom": {
+    "NAME": "巴基特制炮弹",
+    "DESCRIPTION": " 消耗 。 NL 调转敌人的炮口朝向。",
+    "UPGRADE_DESCRIPTION": " 消耗 。 NL 调转敌人的炮口朝向。"
   }
 }
+

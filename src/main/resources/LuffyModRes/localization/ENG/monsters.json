@@ -1,0 +1,10 @@
+{
+  "LuffyMod:BuggyBoss": {
+    "NAME": "Buggy",
+    "DIALOG": [
+      "Blow them away!",
+      "Die in a flashy way!",
+      "Chop-Chop-EsCape——！"
+    ]
+  }
+}

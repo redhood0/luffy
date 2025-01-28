@@ -1,7 +1,348 @@
 {
   "LuffyMod:Strike": {
-    "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害。",
-    "UPGRADE_DESCRIPTION": " 固有 。 NL 造成 !D! 点伤害。"
+    "NAME": "Strike",
+    "DESCRIPTION": "Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage."
+  },
+  "LuffyMod:GumStrike": {
+    "NAME": "Gum Strike",
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Elasticity .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain !M! Elasticity ."
+  },
+  "LuffyMod:GumDefends": {
+    "NAME": "Gum Defense",
+    "DESCRIPTION": "Gain !B! Block. NL Lose !M!  Elasticity , next attack deals an additional !M! damage.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Lose !M!  Elasticity , next attack deals an additional !M! damage."
+  },
+  "LuffyMod:Defend": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block."
+  },
+  "LuffyMod:GumGumFruit": {
+    "NAME": "Mysterious Pattern Fruit",
+    "DESCRIPTION": "Eat the mysterious patterned fruit. NL Permanently remove this card after use.",
+    "UPGRADE_DESCRIPTION": "Eat the mysterious patterned fruit. NL Permanently remove this card after use."
+  },
+  "LuffyMod:PistolLv1": {
+    "NAME": "Gum-Gum Pistol",
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! Elasticity to gain !M! additional damage.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Lose !M! Elasticity to gain !M! additional damage."
+  },
+  "LuffyMod:GatlingLv1": {
+    "NAME": "Gum-Gum Gatling",
+    "DESCRIPTION": " Deal !D! damage !M! times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage !M! times.",
+    "EXTENDED_DESCRIPTION": [
+      " NL Lose ",
+      " Elasticity to gain ",
+      " additional attacks."
+    ]
+  },
+  "LuffyMod:FusenLv1": {
+    "NAME": "Gum-Gum Balloon",
+    "DESCRIPTION": " Exhaust . Convert your Elasticity into an equal amount of Block.",
+    "UPGRADE_DESCRIPTION": " Exhaust . Retain . Convert your Elasticity into 1.5 times its value as Block."
+  },
+  "LuffyMod:Recharge": {
+    "NAME": "Gum-Gum Recharge",
+    "DESCRIPTION": " Exhaust . NL Gain !M! Elasticity. Draw 1 card.",
+    "UPGRADE_DESCRIPTION": " Exhaust . Innate . NL Gain !M! Elasticity. Draw 1 card."
+  },
+  "LuffyMod:RifleLv1": {
+    "NAME": "Gum-Gum Rifle",
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! Elasticity to draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Lose !M! Elasticity to draw 2 cards."
+  },
+  "LuffyMod:RubberDrive": {
+    "NAME": "Gum Drive",
+    "DESCRIPTION": "Draw 2 cards. NL Lose !M! Elasticity to gain [E] .",
+    "UPGRADE_DESCRIPTION": "Draw 3 cards. NL Lose !M! Elasticity to gain [E] ."
+  },
+  "LuffyMod:BazookaLv1": {
+    "NAME": "Gum-Gum Bazooka",
+    "DESCRIPTION": "Deal !D! damage. NL Lose 10 Elasticity to apply !M! Vulnerable .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Lose 10 Elasticity to apply !M! Vulnerable ."
+  },
+  "LuffyMod:GearTwo": {
+    "NAME": "Gear Second",
+    "DESCRIPTION": "[Gum-Gum] attack cards deal NL an additional instance of damage. NL Lose !M! HP at the end of your turn.",
+    "UPGRADE_DESCRIPTION": "[Gum-Gum] attack cards NL deal an additional instance of damage. NL Lose !M! HP at the end of your turn."
+  },
+  "LuffyMod:PistolLv2": {
+    "NAME": "Gum-Gum Jet Pistol",
+    "DESCRIPTION": "Lose 1 HP. NL Deal !D! damage and gain !M! Elasticity.",
+    "UPGRADE_DESCRIPTION": "Lose 1 HP. NL Deal !D! damage and gain !M! Elasticity."
+  },
+  "LuffyMod:GatlingLv2": {
+    "NAME": "Gum-Gum Jet Gatling",
+    "DESCRIPTION": "Lose 5 HP.  Deal !D! damage to random enemies 5 times. NL For every !M! Elasticity , deal 1 additional damage",
+    "UPGRADE_DESCRIPTION": "Lose 5 HP.  Deal !D! damage to random enemies 5 times. NL For every !M! Elasticity , deal 1 additional damage",
+    "EXTENDED_DESCRIPTION": [
+      "( ",
+      " ) "
+    ]
+  },
+  "LuffyMod:BazookaLv2": {
+    "NAME": "Gum-Gum Jet Bazooka",
+    "DESCRIPTION": "Lose 2 HP. NL Deal !D! damage and apply !M! Vulnerable .",
+    "UPGRADE_DESCRIPTION": "Lose 2 HP. NL Deal !D! damage and apply !M! Vulnerable ."
+  },
+  "LuffyMod:ReddeHookuLv2": {
+    "NAME": "Gum-Gum Jet Red Hawk",
+    "DESCRIPTION": "For each time you lose HP in combat, reduce this card's cost by [E]. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "For each time you lose HP in combat, reduce this card's cost by [E]. NL Deal !D! damage."
+  },
+  "LuffyMod:AxeLv2": {
+    "NAME": "Gum-Gum Jet Axe",
+    "DESCRIPTION": "Lose 2 HP. NL Deal !D! damage and apply !M! Weak to ALL enemies.",
+    "UPGRADE_DESCRIPTION": "Lose 2 HP. NL Deal !D! damage and apply !M! Weak to ALL enemies."
+  },
+  "LuffyMod:Bloodboiling": {
+    "NAME": "Blood Boiling",
+    "DESCRIPTION": "Whenever you lose HP from a card, NL gain !M! Strength and Elasticity.",
+    "UPGRADE_DESCRIPTION": "Whenever you lose HP from a card, NL gain !M! Strength and Elasticity."
+  },
+  "LuffyMod:MeatBone": {
+    "NAME": "Food - Meat on Bone",
+    "DESCRIPTION": " Exhaust . Gain !M! Satiety. NL If HP is below 50%, heal 9 HP.",
+    "UPGRADE_DESCRIPTION": " Exhaust . Gain !M! Satiety. NL If HP is below 50%, heal 12 HP."
+  },
+  "LuffyMod:Pilaf": {
+    "NAME": "Food - Fried Rice",
+    "DESCRIPTION": " Exhaust . Gain !M! Satiety. NL Gain [E].",
+    "UPGRADE_DESCRIPTION": " Exhaust . Gain !M! Satiety. NL Gain [E]  [E]."
+  },
+  "LuffyMod:WeddingCake": {
+    "NAME": "Food - Cake",
+    "DESCRIPTION": " Exhaust . Gain !M! Satiety. NL Gain 1 Artifact.",
+    "UPGRADE_DESCRIPTION": " Exhaust . Gain !M! Satiety. NL Gain 2 Artifacts."
+  },
+  "LuffyMod:LifeReturn": {
+    "NAME": "Life Return",
+    "DESCRIPTION": "Lose all Satiety, gain that much [E] and draw that many cards.  Exhaust .",
+    "UPGRADE_DESCRIPTION": "Lose all Satiety, gain that much [E] and draw that many cards.  Exhaust .",
+    "EXTENDED_DESCRIPTION": [
+      "Can only be used if HP is below 20."
+    ]
+  },
+  "LuffyMod:IsMyGuest": {
+    "NAME": "Those Who Are Hungry Are My Guests",
+    "DESCRIPTION": "If you have no Satiety, gain !M! random Food cards.",
+    "UPGRADE_DESCRIPTION": "If you have no Satiety, gain !M! random Food cards."
+  },
+  "LuffyMod:Panacea": {
+    "NAME": "I Want to Become a Panacea",
+    "DESCRIPTION": " Exhaust . Remove 1 random debuff. NL If you have no potions, gain 1 random potion.",
+    "UPGRADE_DESCRIPTION": " Exhaust . Remove 2 random debuffs. NL If you have no potions, gain 1 random potion."
+  },
+  "LuffyMod:HaoshokuHaki": {
+    "NAME": "Conqueror's Haki Intimidation",
+    "DESCRIPTION": " Exhaust . All enemies lose !M! Strength for 1 turn. NL Enemies with lower HP than you are Stunned for 1 turn.",
+    "UPGRADE_DESCRIPTION": " Exhaust . All enemies lose !M! Strength for 1 turn. NL Enemies with lower HP than you are Stunned for 1 turn."
+  },
+  "LuffyMod:BusoshokuTrain": {
+    "NAME": "~~~Armament Haki Training",
+    "DESCRIPTION": " Exhaust . Gain !M! Armament Haki. Draw 1 card.",
+    "UPGRADE_DESCRIPTION": " Exhaust . Gain !M! Armament Haki. Draw 1 card."
+  },
+  "LuffyMod:ObservationHaki": {
+    "NAME": "Observation Haki",
+    "DESCRIPTION": "Dodge the next !M! enemy attacks.",
+    "UPGRADE_DESCRIPTION": "Dodge the next !M! enemy attacks."
+  },
+  "LuffyMod:ObservationForesight": {
+    "NAME": "ObservationHaki-Future Sight",
+    "DESCRIPTION": "Scry !M!. Draw 1 card.",
+    "UPGRADE_DESCRIPTION": "Scry !M!. Draw 1 card."
+  },
+  "LuffyMod:TeachingsOfDarkKing": {
+    "NAME": "~~Dark King's Teachings",
+    "DESCRIPTION": "At the start of each turn,  Exhaust  1 card and gain 2 Armament Haki.",
+    "UPGRADE_DESCRIPTION": "Innate. At the start of each turn,  Exhaust  1 card and gain 2 Armament Haki."
+  },
+  "LuffyMod:BloodAcceleration": {
+    "NAME": "Blood Acceleration",
+    "DESCRIPTION": "Lose 2 HP. NL Draw !M! cards. The next attack card you play costs 0 energy. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Lose 2 HP. NL Draw !M! cards. The next attack card you play costs 0 energy. Exhaust."
+  },
+  "LuffyMod:SoulKing": {
+    "NAME": "Brook: Soul King",
+    "DESCRIPTION": "Move !M! cards from your discard pile to your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Move !M! cards from your discard pile to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose cards to add to your hand."
+    ]
+  },
+  "LuffyMod:FrankSuper": {
+    "NAME": "Franky: SUPER!",
+    "DESCRIPTION": "Upgrade 1 random card in your hand. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Upgrade 1 selected card in your hand. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to upgrade."
+    ]
+  },
+  "LuffyMod:ISmellAVG": {
+    "NAME": "I Smell Adventure",
+    "DESCRIPTION": "Discard your entire hand. NL Then draw the same number of cards.",
+    "UPGRADE_DESCRIPTION": "Discard your entire hand. NL Then draw the same number +1 cards."
+  },
+  "LuffyMod:Yohohoho": {
+    "NAME": "Yohohoho",
+    "DESCRIPTION": "Play the soul's melody, applying !M! random debuffs to all enemies. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play the soul's melody, applying !M! random debuffs to all enemies. Exhaust."
+  },
+  "LuffyMod:WantToLive": {
+    "NAME": "I Want to Live!",
+    "DESCRIPTION": "Discover 1 random *Colorless card, repeat !M! times. NL The card costs 0 energy this turn. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Discover 1 random *Colorless card, repeat !M! times. NL The card costs 0 energy this turn. Exhaust."
+  },
+  "LuffyMod:ThinkWhatUHave": {
+    "NAME": "~Think About What You Still Have",
+    "DESCRIPTION": "Gain !M! Block for each Companion card in your *Draw Pile and *Hand. NL",
+    "UPGRADE_DESCRIPTION": "Gain !M! Block for each Companion card in your *Draw Pile and *Hand. NL ",
+    "EXTENDED_DESCRIPTION": [
+      "Currently gaining (",
+      ") Block."
+    ]
+  },
+  "LuffyMod:TwoYearSabaody": {
+    "NAME": "~~~~~Two Years Later, Sabaody",
+    "DESCRIPTION": "At the start of each turn, add 1 random Companion card to your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of each turn, add 1 random Companion card to your hand."
+  },
+  "LuffyMod:HaveWay": {
+    "NAME": "I Have a Way",
+    "DESCRIPTION": "When choosing the next floor's path, you can ignore the current path. Exhaust.",
+    "UPGRADE_DESCRIPTION": "When choosing the next floor's path, you can ignore the current path. Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Remaining skips:"
+    ]
+  },
+  "LuffyMod:NothingHappen": {
+    "NAME": "Nothing Happened",
+    "DESCRIPTION": " Retain for 1 turn .Cannot be played. NL When you would die, trigger from your *Hand to prevent death, heal to 20 HP, and remove this card from your deck.",
+    "UPGRADE_DESCRIPTION": " Retain . Cannot be played. NL When you would die, trigger from your *Hand to prevent death, heal to 20 HP, and remove this card from your deck.",
+    "EXTENDED_DESCRIPTION": [
+      "Cannot be played."
+    ]
+  },
+  "LuffyMod:DosFleur": {
+    "NAME": "DosFleur-Control",
+    "DESCRIPTION": "Draw 2 cards, they are temporarily Retained for 1 turn.",
+    "UPGRADE_DESCRIPTION": "Draw 2 cards, they are Retained for the rest of the combat.",
+    "EXTENDED_DESCRIPTION": [
+      "Temporarily Retained."
+    ]
+  },
+  "LuffyMod:FrankyGeneral": {
+    "NAME": "Franky General",
+    "DESCRIPTION": "Deal !D! damage to all enemies, gain !B! Block. NL Can be upgraded multiple times.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies, gain !B! Block. NL Can be upgraded multiple times."
+  },
+  "LuffyMod:GuardPoint": {
+    "NAME": "Guard Point",
+    "DESCRIPTION": "Gain !B! Block !M! times.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block !M! times."
+  },
+  "LuffyMod:KeepMyMoney": {
+    "NAME": "You Won't Get My Money",
+    "DESCRIPTION": "Deal !D! damage. NL On Execute , gain !M! Gold. NL If the enemy is a Thief, Execute them directly.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL On Execute , gain !M! Gold. NL If the enemy is a Thief, Execute them directly."
+  },
+  "LuffyMod:HakiHardening": {
+    "NAME": "Hardening Defense",
+    "DESCRIPTION": "Gain !B! Block. NL Spend up to !M! Armament Haki to gain !M! Metallic. Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Spend up to !M! Armament Haki to gain !M! Metallic. Exhaust."
+  },
+  "LuffyMod:SakuraFlow": {
+    "NAME": "Ryou: Flow of Armament",
+    "DESCRIPTION": "Spend !M! Armament Haki. Your next attack deals double damage and ignores Block.",
+    "UPGRADE_DESCRIPTION": "Spend !M! Armament Haki. Your next attack deals double damage and ignores Block."
+  },
+  "LuffyMod:GearThree": {
+    "NAME": "Gear Third",
+    "DESCRIPTION": "Gain !B! Block. Enter Gearthird for !M! turns. NL After Gearthird ends, gain 2 turns of Supervulnerable and Superweak .",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. Enter Gearthird for !M! turns. NL After Gearthird ends, gain 2 turns of Supervulnerable and Superweak ."
+  },
+  "LuffyMod:GigantPistolLv3": {
+    "NAME": "Gigant Pistol",
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! Elasticity to increase damage by !M!.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Lose !M! Elasticity to increase damage by !M!."
+  },
+  "LuffyMod:GigantAxeLv3": {
+    "NAME": "Gigant Axe",
+    "DESCRIPTION": "Deal !D! damage.apply 1 Superweak . NL Lose !M! Elasticity to apply 1 Superweak to all enemies.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.apply 1 Superweak . NL Lose !M! Elasticity to apply 2 Superweak to all enemies."
+  },
+  "LuffyMod:GigantWhipLv3": {
+    "NAME": "Gigant Whip",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Lose !M! Elasticity to increase damage by 5.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies. NL Lose !M! Elasticity to increase damage by 5."
+  },
+  "LuffyMod:GigantBazookaLv3": {
+    "NAME": "Gigant Bazooka",
+    "DESCRIPTION": "Deal !D! damage. apply 1 Supervulnerable . NL Lose !M! Elasticity to apply 1 Supervulnerable .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. apply 1 Supervulnerable . NL Lose !M! Elasticity to apply 2 Supervulnerable ."
+  },
+  "LuffyMod:GigantFusenLv3": {
+    "NAME": "Gigant Balloon",
+    "DESCRIPTION": "Gain !B! Block. NL  Rebound the next instance of damage.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL  Rebound the next instance of damage."
+  },
+  "LuffyMod:GiantThrustLv3": {
+    "NAME": "Gigant Thrust",
+    "DESCRIPTION": "Gain !B! Block. NL Lose !M! Elasticity to deal damage equal to your current Block to a targeted enemy.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Lose !M! Elasticity to deal damage equal to your current Block to a targeted enemy."
+  },
+  "LuffyMod:GumDefend": {
+    "NAME": "Gum-Gum Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Lose !M! Elasticity to gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Lose !M! Elasticity to gain !M! Block."
+  },
+  "LuffyMod:GumWeb": {
+    "NAME": "Gum-Gum Net",
+    "DESCRIPTION": "Gain !B! Block . NL  place a card from your discard pile on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block . NL  place 2 card from your discard pile on top of your draw pile."
+  },
+  "LuffyMod:MigawariLv2": {
+    "NAME": "Gum-Gum JET Scapegoat",
+    "DESCRIPTION": "Lose 1 HP, Exhaust the top card of your draw pile. NL Gain !B! Block .",
+    "UPGRADE_DESCRIPTION": "Lose 1 HP, Exhaust the top card of your draw pile. NL Gain !B! Block ."
+  },
+  "LuffyMod:ObservationPerception": {
+    "NAME": "~~ObservationHaki-Aura Perception",
+    "DESCRIPTION": " Scry !M!. For each enemy intending to attack, gain !B! Block .",
+    "UPGRADE_DESCRIPTION": " Scry !M!. For each enemy intending to attack, gain !B! Block ."
+  },
+  "LuffyMod:RiffleLv2": {
+    "NAME": "Gum-Gum JET Rifle",
+    "DESCRIPTION": "Lose 2 HP, deal !D! damage, draw 1 card. NL Whenever you lose HP from a card, return this card from your discard pile to your hand.",
+    "UPGRADE_DESCRIPTION": "Lose 2 HP, deal !D! damage, draw 1 card. NL Whenever you lose HP from a card, return this card from your discard pile to your hand."
+  },
+  "LuffyMod:WhipLv1": {
+    "NAME": "Gum-Gum Whip",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Lose !M! Elasticity to increase damage by 3.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to all enemies. NL Lose !M! Elasticity to increase damage by 3."
+  },
+  "LuffyMod:DreamBeLaughed": {
+    "NAME": "Dream is Mocked",
+    "DESCRIPTION": "Gain !B! Block, place a Wounded card on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block, place a Wounded card on top of your draw pile."
+  },
+  "LuffyMod:GumBoh": {
+    "NAME": "Gum-Gum Boh",
+    "DESCRIPTION": " Scry !M! , gain !B! Block. NL End your turn.",
+    "UPGRADE_DESCRIPTION": "Scry !M! , gain !B! Block. NL End your turn."
+  },
+  "LuffyMod:OkamaWay": {
+    "NAME": "Okama Way",
+    "DESCRIPTION": "Exhaust. NL Choose 1 card from your draw pile and gain a copy of that card is Exhaust .",
+    "UPGRADE_DESCRIPTION": "Choose 1 card from your draw pile and gain a copy of that card is Exhaust ."
+  },
+  "LuffyMod:BuggyBoom": {
+    "NAME": "Buggy Ball",
+    "DESCRIPTION": "Exhaust. NL turn the enemy's gun barrel direction.",
+    "UPGRADE_DESCRIPTION": "Exhaust. NL turn the enemy's gun barrel direction."
   }
 }

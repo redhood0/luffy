@@ -1,10 +1,13 @@
 package com.onepiece.relic;
 
 import basemod.abstracts.CustomRelic;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.onepiece.helpers.ModHelper;
 import com.onepiece.powers.GumGumFruitPower;
 
@@ -34,6 +37,12 @@ public class GumGumFruitRelic extends CustomRelic {
         AbstractDungeon.actionManager.addToBottom(
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GumGumFruitPower(AbstractDungeon.player, 1), 1)
         );
+    }
+
+
+    public void onEnterRoom(AbstractRoom room) {
+        Texture newTexture = new Texture("LuffyModRes/img/char/luffy_gear1.png");
+        AbstractDungeon.player.img = newTexture;
     }
 
 
