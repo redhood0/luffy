@@ -25,14 +25,14 @@ public class PistolLv2 extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME; // 读取本地化的名字
     private static final String IMG_PATH = "LuffyModRes/img/cards/PistolLv2.png";
-    private static final int COST = 1;
+    private static final int COST = 0;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述 "造成 !D! 点伤害。";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = Luffy_RED;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
-    private static final int DAMAGE = 12;
-    private static final int UP_DAMAGE = 5;
+    private static final int DAMAGE = 10;
+    private static final int UP_DAMAGE = 4;
 
     public int costBlood; // 自定义参数 1
 

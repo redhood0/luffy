@@ -24,7 +24,7 @@ public class GatlingLv2 extends CustomCard {
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME; // 读取本地化的名字
     private static final String IMG_PATH = "LuffyModRes/img/cards/GatlingLv2.png";
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述 "造成 !D! 点伤害。";
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardColor COLOR = Luffy_RED;
@@ -40,7 +40,7 @@ public class GatlingLv2 extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
 
         this.baseDamage = DAMAGE;
-        this.magicNumber = this.baseMagicNumber = 10;
+        this.magicNumber = this.baseMagicNumber = 15;
         this.costBlood = 5;
 
         // 添加自定义标签
@@ -65,11 +65,10 @@ public class GatlingLv2 extends CustomCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        for (int i = 0; i < this.magicNumber; ++i) {
+        this.addToBot(new LoseHPAction(p, p, costBlood));
+        for (int i = 0; i < 5; ++i) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
-        this.addToBot(new LoseHPAction(p, p, costBlood));
         this.addToBot(new ApplyPowerAction(p, p, new ElasticPower(p, this.magicNumber), this.magicNumber));
     }
 

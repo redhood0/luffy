@@ -52,7 +52,7 @@ public class RubberDrivePower extends AbstractPower{
 
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
         if(power.ID == ElasticPower.POWER_ID){
-            log.info("===>"+power.amount);
+
             if(power.amount <= -4){
                 this.addToBot(new DrawCardAction(target, 1));
             }

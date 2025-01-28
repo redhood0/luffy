@@ -2,6 +2,7 @@ package com.onepiece.characters;
 
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
@@ -12,17 +13,21 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.Vampires;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.relics.Vajra;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.onepiece.cards.basic.Defend;
 import com.onepiece.cards.basic.GumGumFruit;
 import com.onepiece.cards.basic.Strike;
 import com.onepiece.modcore.LuffyMod;
+import com.onepiece.relic.GumGumFruitRelic;
 import com.onepiece.relic.MyRelic;
 
 import java.util.ArrayList;
@@ -65,6 +70,7 @@ public class LuffyChar extends CustomPlayer {
         this.dialogY = (this.drawY + 150.0F * Settings.scale);
 
 
+
         // 初始化你的人物，如果你的人物只有一张图，那么第一个参数填写你人物图片的路径。
         this.initializeClass(
                 "LuffyModRes/img/char/character.png", // 人物图片
@@ -75,8 +81,7 @@ public class LuffyChar extends CustomPlayer {
                 200.0F, 220.0F, // 人物碰撞箱大小，越大的人物模型这个越大
                 new EnergyManager(3) // 初始每回合的能量
         );
-
-
+        checkRelicAndChangeImage();
         // 如果你的人物没有动画，那么这些不需要写
         // this.loadAnimation("ExampleModResources/img/char/character.atlas", "ExampleModResources/img/char/character.json", 1.8F);
         // AnimationState.TrackEntry e = this.state.setAnimation(0, "Idle", true);
@@ -85,6 +90,15 @@ public class LuffyChar extends CustomPlayer {
 
 
     }
+
+    // 检测遗物并改变形象的方法
+    private void checkRelicAndChangeImage() {
+        if (AbstractDungeon.player != null && LuffyMod.saveField) {
+            // 如果携带了遗物，加载新的图片
+            this.img = ImageMaster.loadImage("LuffyModRes/img/char/luffy_gear1.png");
+        }
+    }
+
 
 //    @Override
 //    public ArrayList<AbstractCard> getCardPool(ArrayList<AbstractCard> tmpPool) {
@@ -104,7 +118,7 @@ public class LuffyChar extends CustomPlayer {
         for (int x = 0; x < 5; x++) {
             retVal.add(Strike.ID);
         }
-        for (int x = 0; x < 5; x++) {
+        for (int x = 0; x < 4; x++) {
             retVal.add(Defend.ID);
         }
         retVal.add(GumGumFruit.ID);
@@ -124,10 +138,10 @@ public class LuffyChar extends CustomPlayer {
         return new CharSelectInfo(
                 characterStrings.NAMES[0], // 人物名字
                 characterStrings.TEXT[0], // 人物介绍
-                75, // 当前血量
-                75, // 最大血量
+                78, // 当前血量
+                78, // 最大血量
                 0, // 初始充能球栏位
-                99, // 初始携带金币
+                56, // 初始携带金币
                 5, // 每回合抽牌数量
                 this, // 别动
                 this.getStartingRelics(), // 初始遗物
@@ -262,4 +276,5 @@ public class LuffyChar extends CustomPlayer {
         @SpireEnum
         public static CardLibrary.LibraryType Luffy_RED;
     }
+
 }

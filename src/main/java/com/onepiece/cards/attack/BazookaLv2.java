@@ -33,7 +33,7 @@ public class BazookaLv2 extends CustomCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int DAMAGE = 9;
-    private static final int UP_DAMAGE = 2;
+    private static final int UP_DAMAGE = 3;
 
     public int costBlood; // 自定义参数 1
 

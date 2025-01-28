@@ -60,7 +60,7 @@ public class BazookaLv1 extends CustomCard {
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeDamage(8);
+            this.upgradeDamage(2);
             // 加上以下两行就能使用UPGRADE_DESCRIPTION了（如果你写了的话）
             this.rawDescription = CARD_STRINGS.UPGRADE_DESCRIPTION;
             this.initializeDescription();
@@ -84,7 +84,11 @@ public class BazookaLv1 extends CustomCard {
 
         if (ModHelper.HasEnoughElasticPower(AbstractDungeon.player, this.magicNumber)) {
 //            this.magicNumber += this.addATKTimeNum; // 根据条件动态调整攻击次数
-            this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1));
+            if(upgraded){
+                this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, 2, false), 2));
+            }else {
+                this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, 1, false), 1));
+            }
         }
 
     }

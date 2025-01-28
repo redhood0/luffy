@@ -55,6 +55,7 @@ public class GearTwo extends CustomCard {
 //        p.masterDeck.removeCard(this);
 
 
+
     public AbstractCard makeCopy() {
         return new GearTwo();
     }

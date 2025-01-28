@@ -12,8 +12,7 @@ import com.onepiece.powers.BloodboilingPower;
 import com.onepiece.powers.GearTwoPower;
 
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
-import static com.onepiece.tag.CustomTags.GEAR;
-import static com.onepiece.tag.CustomTags.GUMGUM;
+import static com.onepiece.tag.CustomTags.*;
 
 public class Bloodboiling extends CustomCard {
     public static final String ID = ModHelper.makePath("Bloodboiling");
@@ -31,7 +30,7 @@ public class Bloodboiling extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
         this.magicNumber = this.baseMagicNumber = 1;
         this.tags.add(GUMGUM);
-        this.tags.add(GEAR);
+        this.tags.add(GEAR_2);
     }
 
 

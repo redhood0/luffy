@@ -1,10 +1,12 @@
 package com.onepiece.relic;
 
 import basemod.abstracts.CustomRelic;
+import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.onepiece.helpers.ModHelper;
 import com.onepiece.powers.GumGumFruitPower;
 
@@ -35,6 +37,8 @@ public class GumGumFruitRelic extends CustomRelic {
                 new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new GumGumFruitPower(AbstractDungeon.player, 1), 1)
         );
     }
+
+
 
 
     // 获取遗物描述，但原版游戏只在初始化和获取遗物时调用，故该方法等于初始描述

@@ -1,9 +1,12 @@
 package com.onepiece.cards.basic;
 
 import basemod.AutoAdd;
+import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.cardmods.ExhaustMod;
 import basemod.helpers.CardModifierManager;
+import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.TransformCardInHandAction;
@@ -18,13 +21,16 @@ import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.onepiece.action.TransformCardAction;
 import com.onepiece.helpers.ModHelper;
+import com.onepiece.modcore.LuffyMod;
 import com.onepiece.powers.GumGumFruitPower;
 import com.onepiece.relic.GumGumFruitRelic;
 import com.onepiece.relic.MyRelic;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 import static com.onepiece.characters.LuffyChar.PlayerColorEnum.Luffy_RED;
+
 
 //@AutoAdd.Ignore
 public class GumGumFruit extends CustomCard {
@@ -32,7 +38,7 @@ public class GumGumFruit extends CustomCard {
     public static final String ID = ModHelper.makePath("GumGumFruit");
     private static final CardStrings CARD_STRINGS = CardCrawlGame.languagePack.getCardStrings(ID); // 从游戏系统读取本地化资源
     private static final String NAME = CARD_STRINGS.NAME; // 读取本地化的名字
-    private static final String IMG_PATH = "LuffyModRes/img/cards/Defend.png";//todo:改成橡胶果实icon
+    private static final String IMG_PATH = "LuffyModRes/img/cards/GumGumFruit.png";//todo:改成橡胶果实icon
     private static final int COST = 0;
     private static final String DESCRIPTION = CARD_STRINGS.DESCRIPTION; // 读取本地化的描述
     private static final CardType TYPE = CardType.POWER;
@@ -47,17 +53,17 @@ public class GumGumFruit extends CustomCard {
         this.isInnate = true;
 //        this.baseBlock = 5;
 //        this.tags.add(CardTags.STARTER_DEFEND);
-         // 使用后永久移除
+        // 使用后永久移除
     }
 
 
     @Override
     public void upgrade() {
-//        if (!this.upgraded) {
-//            this.upgradeName();
+        if (!this.upgraded) {
+            this.upgradeName();
 //            this.upgradeBaseCost(0);
-////            this.upgradeBlock(3);
-//        }
+//            this.upgradeBlock(3);
+        }
     }
 
     @Override
@@ -95,6 +101,26 @@ public class GumGumFruit extends CustomCard {
 //        CardModifierManager.addModifier(this, new Remov());
 //        p.masterDeck.removeCard(this);
 
+        // 获取当前玩家的角色
+        AbstractPlayer player = AbstractDungeon.player;
+
+        // 加载新的图片资源
+        Texture newTexture = new Texture("LuffyModRes/img/char/luffy_gear1.png");
+
+        player.img = newTexture;
+
+        LuffyMod.saveField = true;
+        try {
+            SpireConfig config = new SpireConfig("LuffyMod", "Common");
+            config.setBool("save_field", true);
+            config.save();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+// 替换角色的战斗图片
+//        player.loadAnimation("images/characters/your_mod_character/default.atlas", newTexture, 1.0f);
     }
 
     public AbstractCard makeCopy() {
