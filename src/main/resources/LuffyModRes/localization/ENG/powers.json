@@ -79,7 +79,7 @@
     "NAME": "Gear Third",
     "DESCRIPTIONS": [
       " #yGiant cards cost 2 less energy, and Elasticity consumption is reduced by 50%. Lasts for",
-      " turns. At the end of the effect, gain 2 turns of Vulnerable and Weak."
+      " card. At the end of the effect, gain 2 turns of Supervulnerable and Superweak."
     ]
   },
   "LuffyMod:SuperWeakPower": {

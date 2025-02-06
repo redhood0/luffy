@@ -262,8 +262,8 @@
   },
   "LuffyMod:GearThree": {
     "NAME": "Gear Third",
-    "DESCRIPTION": "Gain !B! Block. Enter Gearthird for !M! turns. NL After Gearthird ends, gain 2 turns of Supervulnerable and Superweak .",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. Enter Gearthird for !M! turns. NL After Gearthird ends, gain 2 turns of Supervulnerable and Superweak ."
+    "DESCRIPTION": "Gain !B! Block. NL After !M! Giant cards, the cost is reduced by 2 and Elasticity is reduced by 50%.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL After !M! Giant cards, the cost is reduced by 2 and Elasticity is reduced by 50%."
   },
   "LuffyMod:GigantPistolLv3": {
     "NAME": "Gigant Pistol",
