@@ -11,13 +11,13 @@
   },
   "LuffyMod:Defend": {
     "NAME": "防御",
-    "DESCRIPTION": "获得 !B! 点格挡。",
-    "UPGRADE_DESCRIPTION": " 获得 !B! 点格挡。"
+    "DESCRIPTION": "获得 !B! 点 格挡。",
+    "UPGRADE_DESCRIPTION": " 获得 !B! 点 格挡。"
   },
   "LuffyMod:GumDefends": {
     "NAME": "橡胶防御",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 失去 !M! 点 弹力 ,下次攻击额外造成 !M! 点伤害。",
-    "UPGRADE_DESCRIPTION": " 获得 !B! 点格挡。 NL 失去 !M! 点 弹力 ,下次攻击额外造成 !M! 点伤害。"
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 失去 !M! 点 弹力 ,下次攻击额外造成 !M! 点伤害。",
+    "UPGRADE_DESCRIPTION": " 获得 !B! 点 格挡。 NL 失去 !M! 点 弹力 ,下次攻击额外造成 !M! 点伤害。"
   },
   "LuffyMod:GumGumFruit": {
     "NAME": "奇怪花纹的果实",
@@ -241,8 +241,8 @@
   },
   "LuffyMod:GuardPoint": {
     "NAME": "毛皮强化",
-    "DESCRIPTION": "获得 !B! 点护甲 !M! 次。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点护甲 !M! 次。"
+    "DESCRIPTION": "获得 !B! 点 格挡 !M! 次。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 !M! 次。"
   },
   "LuffyMod:KeepMyMoney": {
     "NAME": "我的钱是不会给你们的",
@@ -251,8 +251,8 @@
   },
   "LuffyMod:HakiHardening": {
     "NAME": "硬化防御",
-    "DESCRIPTION": "获得 !B! 点格挡。 NL 最多使用 !M! 点 武装色霸气 ,获得 !M! * 8 点格挡 。",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡。 NL 最多使用 !M! 点 武装色霸气 , NL 获得 !M! 点格挡 。"
+    "DESCRIPTION": "获得 !B! 点 格挡。 NL 最多使用 !M! 点 武装色霸气 ,获得 !M! * 8 点格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡。 NL 最多使用 !M! 点 武装色霸气 , NL 获得 !M! 点格挡 。"
   },
   "LuffyMod:SakuraFlow": {
     "NAME": "流樱",
