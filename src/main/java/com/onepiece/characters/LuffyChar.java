@@ -63,9 +63,8 @@ public class LuffyChar extends CustomPlayer {
             "LuffyModRes/img/UI/orb/layer2d.png",
             "LuffyModRes/img/UI/orb/layer1d.png"
     };
-    // 每个图层的旋转速度
-    private static final float[] LAYER_SPEED = new float[]{-40.0F, -32.0F, 20.0F, -20.0F, 0.0F, -10.0F, -8.0F, 5.0F, -5.0F, 0.0F};
-    // 人物的本地化文本，如卡牌的本地化文本一样，如何书写见下
+
+//删除这一行，在分支上，测试
     private static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString("LuffyMod:Luffy");
 
     public LuffyChar(String name) {
