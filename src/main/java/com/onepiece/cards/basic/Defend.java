@@ -27,11 +27,7 @@ public class Defend extends CustomCard {
     private static final CardTarget TARGET = CardTarget.SELF;
 
     public Defend() {
-        super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, COLOR, RARITY, TARGET);
-        this.baseBlock = 5;
-        this.tags.add(CardTags.STARTER_DEFEND);
-
-    }
+      
 
     @Override
     public void upgrade() {
